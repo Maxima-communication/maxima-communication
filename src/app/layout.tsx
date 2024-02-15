@@ -1,11 +1,8 @@
 import { ThemeProvider } from "@/components/providers/theme-providers";
-import TrpcProvider from "@/components/providers/trpc-provider";
-import { Toaster } from "@/components/ui/toaster";
+
 import { siteConfig } from "@/configs/site";
-import GoogleAnalytics from "@/google-analytics";
 import "@/styles/globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
-import { dark } from "@clerk/themes";
+
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 
@@ -15,18 +12,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.name,
-    template: `%s - CoDox`
+    template: `%s - CoDox`,
   },
   description: siteConfig.description,
   // added new keywords for SEO
   keywords: [
     "clerk auth",
-    "prisma",
-    "prisma io",
-    "prisma postgres",
     "nextjs 13",
     "tailwind nextjs",
-    "prisma nextjs",
     "trpc nextjs",
     "trpc",
     "trpc api",
@@ -38,16 +31,14 @@ export const metadata: Metadata = {
     "nextjs with trpc",
     "t3 stack",
     "typescript",
-    "clerk with prisma",
-    "trpc with prisma",
     "web development",
-    "codox"
+    "codox",
   ],
   authors: [
     {
       name: siteConfig.author.name,
-      url: siteConfig.author.github
-    }
+      url: siteConfig.author.github,
+    },
   ],
   creator: siteConfig.author.name,
   openGraph: {
@@ -57,55 +48,45 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${siteConfig.url}/og-image.png`],
-    siteName: siteConfig.name
+    siteName: siteConfig.name,
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${siteConfig.url}/og-image.png`],
-    creator: "@sujjeeee"
+    creator: "@sujjeeee",
   },
   icons: {
-    icon: "/favicon.ico"
-  }
+    icon: "/favicon.ico",
+  },
 };
 
 export const viewport: Viewport = {
   colorScheme: "dark light",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" }
-  ]
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 };
 
 export default function RootLayout({
-  children
+  children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider
-      appearance={{
-        baseTheme: dark
-      }}
-    >
-      <TrpcProvider>
-        <html lang="en">
-          <body className={inter.className}>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-            >
-              {children}
-              <GoogleAnalytics />
-              <Toaster />
-            </ThemeProvider>
-          </body>
-        </html>
-      </TrpcProvider>
-    </ClerkProvider>
+    <html lang="en">
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
