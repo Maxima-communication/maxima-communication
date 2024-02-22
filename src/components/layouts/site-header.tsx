@@ -16,36 +16,36 @@ export default function SiteHeader() {
     <header className="md:container md:max-w-6xl px-4">
       <nav className="md:py-8 py-4 flex w-full justify-between items-center z-50">
         <h2 className="text-2xl font-semibold tracking-wide flex gap-2.5 items-center">
-          {isDesktop ? (
-            <>
-              <Link href={"/"}>
-                <Image
-                  className="w-44"
-                  src={maxima}
-                  alt="Maxima communications"
-                />
-              </Link>
-            </>
-          ) : (
-            <span>{"</>"}</span>
-          )}
+          <>
+            <Link href={"/"}>
+              <Image
+                className="w-44"
+                src={maxima}
+                alt="Maxima communications"
+              />
+            </Link>
+          </>
         </h2>
-        <div className="flex justify-center items-center gap-2">
-          <Link
-            target="_blank"
-            href="http://github.com/sujjeee/codox"
-            className={buttonVariants({
-              size: "icon",
-              variant: "outline",
-            })}
-          >
-            <Github className="h-5 w-5" />
-            <span className="sr-only">github profile</span>
-          </Link>
-          <ThemeToggle />
-          <Button className="flex" asChild>
-            <Link href="/signin">Sign in</Link>
-          </Button>
+        <div className="flex content-center justify-between ">
+          <div className="border border-white ">
+            <div className="flex justify-center items-center gap-2">
+              <Link
+                target="_blank"
+                href="http://github.com/sujjeee/codox"
+                className={buttonVariants({
+                  size: "icon",
+                  variant: "outline",
+                })}
+              >
+                <Github className="h-5 w-5" />
+                <span className="sr-only">github profile</span>
+              </Link>
+              <ThemeToggle />
+              <Button className="flex" asChild>
+                <Link href="/signin">Sign in</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
