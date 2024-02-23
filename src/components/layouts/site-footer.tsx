@@ -1,6 +1,6 @@
 export default function SiteFooter() {
   return (
-    <footer className="flex flex-col items-center gap-8 bg-slate-400 mt-4 pt-7">
+    <footer className="container max-w-6xl flex flex-col items-center gap-8 bg-slate-400 mt-4 pt-7">
       <div className="flex  justify-around w-full">
         <div className="">
           <p>newsletter</p>
