@@ -7,7 +7,7 @@ import maxima from "../../../public/maxima-logo.svg";
 import localFont from "next/font/local";
 
 const Bogart = localFont({
-  src: "../../../public/assets/fonts/bogart/Bogart-SemiBold-trial.ttf",
+  src: "../../../public/assets/fonts/bogart/Bogart-Medium-trial.ttf",
 });
 
 export default function SiteHeader() {
@@ -29,25 +29,25 @@ export default function SiteHeader() {
         {/* ------------------------------------------------------------------------------------- */}
 
         {/* ---------------------------------------------NavBar---------------------------------------------------- */}
-        <div className="border  rounded-full px-6 py-3 bg-gray-800">
-          <div className="flex justify-center items-center gap-12  ">
+        <div className="border  rounded-full px-6 py-3 bg-neutral-800">
+          <div className="flex justify-center items-center gap-12 font-semibold ">
             <Link href="#">
               <p
-                className={` border rounded-full bg-slate-500 -mx-3 -my-1 px-3 py-2 w-[130px] text-center ${Bogart.className}`}
+                className={`border-opacity-0 border rounded-full hover:bg-neutral-600 hover:border hover:border-neutral-500 transition-all duration-300 -mx-3 -my-1 px-3 py-2 w-[130px] text-center `}
               >
                 Our Services
               </p>
             </Link>
             <Link href="#">
               <p
-                className={` border rounded-full bg-slate-500 -mx-3 -my-1 px-3 py-2 w-[130px] text-center ${Bogart.className}`}
+                className={`border-opacity-0 border rounded-full hover:bg-neutral-600 hover:border hover:border-neutral-500 transition-all duration-300 -mx-3 -my-1 px-3 py-2 w-[130px] text-center `}
               >
                 Our Process
               </p>
             </Link>
             <Link href="#">
               <p
-                className={` border rounded-full bg-slate-500 -mx-3 -my-1 px-3 py-2 w-[130px] text-center ${Bogart.className}`}
+                className={`border-opacity-0 border rounded-full hover:bg-neutral-600 hover:border hover:border-neutral-500 transition-all duration-300 -mx-3 -my-1 px-3 py-2 w-[130px] text-center `}
               >
                 About us
               </p>
@@ -57,8 +57,8 @@ export default function SiteHeader() {
         {/*-------------------------------------------------------------------------------------------------- */}
         {/* -------------------------------------------COntact Us ----------------------*/}
         <div className="w-44 ">
-          <div className="flex justify-around border rounded-full bg-white text-black  px-5 py-3 text-center font-semibold ">
-            <p className="mr-3">Contact Us</p>
+          <div className="flex justify-around border rounded-full bg-white text-black  px-5 py-3 text-center ">
+            <p className="mr-3 font-semibold ">Contact Us</p>
             <ArrowRight className="w-4 h-6" />
           </div>
         </div>
