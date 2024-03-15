@@ -39,7 +39,7 @@ export default function Home() {
           <Globe />
         </div>
       </div>
-      <div className="w-full bg-slate-400 text-center h-16">wow</div>
+      <div className="w-full bg-slate-400 text-center h-16">test test</div>
     </main>
   );
 }
