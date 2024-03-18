@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import Globe from "@/components/globe";
+import Ticker from "@/components/ticker";
 
 const Bogart = localFont({
   src: "../../../public/assets/fonts/bogart/Bogart-SemiBold-trial.ttf",
@@ -36,12 +37,14 @@ export default function Home() {
               cutting-edge digital products for startups and industrial giants
             </div>
           </div>
-          <div className="absolute top-0 right-0 h-full w-[800px] overflow-visible -mr-44">
+          <div className="absolute top-0  right-0 h-full w-[800px] -mr-44">
             <Globe />
           </div>
         </div>
       </div>
-      <div className="w-full bg-slate-400 text-center h-16">test test</div>
+      <div className="w-full text-gray-50 text-4xl font-semibold h-16 py-20">
+        <Ticker />
+      </div>
     </main>
   );
 }
