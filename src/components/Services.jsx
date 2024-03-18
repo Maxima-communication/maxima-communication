@@ -18,6 +18,8 @@ const Services = () => {
       {/* ---------------------------------- Part 2 -------------------------------------------------------- */}
 
       <div className="flex items-center justify-between my-20 h-96">
+        {/* -------------------------------- THE IMAGE ------------------------------------------------------ */}
+
         <div className="w-1/2 flex items-center justify-center bg-green-800 h-96">
           <img
             src="image-url"
@@ -25,6 +27,9 @@ const Services = () => {
             className="max-h-full max-w-full"
           />
         </div>
+
+        {/* -------------------------------- THE TEXT ------------------------------------------------------- */}
+
         <div className="w-1/2 bg-lime-800 h-96 flex flex-col justify-center">
           <h2 className="text-3xl font-bold mb-4 text-center">Our Services</h2>
           <ul className="text-xl font-bold text-gray-400 bg-gray-700 space-y-6 p-6">
