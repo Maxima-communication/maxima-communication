@@ -45,7 +45,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full text-gray-50 text-4xl font-semibold h-16 py-20">
+      <div className="w-full text-gray-50 text-4xl font-semibold h-16 -mt-10  flex items-center">
         <Ticker />
       </div>
       {/* ------------------------------------ Services ------------------------------------------------- */}
