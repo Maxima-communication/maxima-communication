@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import Globe from "@/components/globe";
+import Ticker from "@/components/ticker";
 import Services from "@/components/Services";
 
 const Bogart = localFont({
@@ -43,7 +44,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-full bg-slate-400 text-center h-16">test test</div>
+      </div>
+      <div className="w-full text-gray-50 text-4xl font-semibold h-16 py-20">
+        <Ticker />
       </div>
       {/* ------------------------------------ Services ------------------------------------------------- */}
       <Services />
