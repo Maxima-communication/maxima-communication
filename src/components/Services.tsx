@@ -2,10 +2,10 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="container max-w-6xl my-20">
+    <div className="container max-w-6xl my-16">
       {/* ---------------------------------- Part 1 -------------------------------------------------------- */}
 
-      <div className="flex flex-col items-center justify-center gap-12 ">
+      <div className="flex flex-col items-center justify-center gap-6 ">
         <div className="text-3xl font-bold">Services</div>
         <div className="max-w-2xl text-center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore at
@@ -17,10 +17,10 @@ const Services = () => {
 
       {/* ---------------------------------- Part 2 -------------------------------------------------------- */}
 
-      <div className="flex items-center justify-between my-20 h-96">
+      <div className="flex items-center justify-between mt-10 h-[550px]">
         {/* -------------------------------- THE IMAGE ------------------------------------------------------ */}
 
-        <div className="w-1/2 flex items-center justify-center bg-green-800 h-96">
+        <div className="w-1/2 flex items-center justify-center bg-green-800 h-full">
           <img
             src="image-url"
             alt="Services"
@@ -30,7 +30,7 @@ const Services = () => {
 
         {/* -------------------------------- THE TEXT ------------------------------------------------------- */}
 
-        <div className="w-1/2 bg-lime-800 h-96 flex flex-col justify-center">
+        <div className="w-1/2 bg-lime-800 h-full flex flex-col justify-center">
           <h2 className="text-3xl font-bold mb-4 text-center">Our Services</h2>
           <ul className="text-xl font-bold text-gray-400 bg-gray-700 space-y-6 p-6">
             <li className="flex items-center justify-between">
