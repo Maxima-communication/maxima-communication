@@ -3,6 +3,7 @@ import Globe from "@/components/globe";
 import Ticker from "@/components/ticker";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
+import Aboutus from "@/components/Aboutus";
 
 const Bogart = localFont({
   src: "../../../public/assets/fonts/bogart/Bogart-SemiBold-trial.ttf",
@@ -28,7 +29,7 @@ export default function Home() {
       </div> */}
           <div className="flex items-center  ">
             {/* ----------------------------------- HERO SECTION ---------------------------------------------------- */}
-            
+
             <div className="w-3/5 -mt-28 space-y-5">
               <div
                 className={`leading-tight tracking-wide text-5xl text-gray-50 ${Glockenspiel.className}`}
@@ -58,6 +59,9 @@ export default function Home() {
 
       {/* ------------------------------------ Services ------------------------------------------------- */}
       <Services />
+
+      {/* ------------------------------------ About US ------------------------------------------------- */}
+      <Aboutus />
 
       {/* ------------------------------------ OUR PROCESS ---------------------------------------------- */}
       <Process />
