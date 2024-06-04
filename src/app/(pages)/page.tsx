@@ -4,6 +4,7 @@ import Ticker from "@/components/ticker";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
 import Aboutus from "@/components/Aboutus";
+import { SparklesCore } from "@/components/ui/sparkles";
 
 const Bogart = localFont({
   src: "../../../public/assets/fonts/bogart/Bogart-SemiBold-trial.ttf",
@@ -56,15 +57,31 @@ export default function Home() {
       <div className="w-full text-gray-50 text-4xl font-semibold h-16 -mt-10  flex items-center">
         <Ticker />
       </div>
+      <div className="h-full relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+        <div className="w-full absolute inset-0 ">
+          <SparklesCore
+            id="tsparticlesfullpage"
+            background="transparent"
+            minSize={0.6}
+            maxSize={1.4}
+            particleDensity={60}
+            className="w-full h-full"
+            particleColor="#FFFFFF"
+          />
+        </div>
+        <div className="relative z-20">
+          {/* ------------------------------------ Services ------------------------------------------------- */}
+          <Services />
 
-      {/* ------------------------------------ Services ------------------------------------------------- */}
-      <Services />
+          {/* ------------------------------------ About US ------------------------------------------------- */}
+          <Aboutus />
 
-      {/* ------------------------------------ About US ------------------------------------------------- */}
-      <Aboutus />
+          {/* ------------------------------------ OUR PROCESS ---------------------------------------------- */}
+          <Process />
+        </div>
+      </div>
 
-      {/* ------------------------------------ OUR PROCESS ---------------------------------------------- */}
-      <Process />
+      
     </main>
   );
 }
