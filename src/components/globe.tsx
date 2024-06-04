@@ -21,7 +21,7 @@ function PixelatedSphere() {
   return (
     <points ref={sphereRef as any}>
       <icosahedronGeometry args={[1, 4]} />
-      <pointsMaterial color="red" size={0.05} />
+      <pointsMaterial color="gray" size={0.05} />
     </points>
   );
 }
@@ -53,7 +53,7 @@ function Birds() {
     return (
       <mesh key={i} position={[1, 0, 0]}>
         <planeGeometry args={[size, size]} />
-        <meshBasicMaterial color="brown" />
+        <meshBasicMaterial color="gray" />
       </mesh>
     );
   });
