@@ -1,8 +1,13 @@
 import React from "react";
+import StyledImage from "./ui/styledimage";
+import code from '../images/code.jpg'
+import meeting from '../images/meeting.jpg'
+import whiteboard from '../images/whiteboard.jpg'
 
 const Process = () => {
   return (
-    <div className="container max-w-6xl my-36">
+<div className="container max-w-6xl my-36">
+
       {/* ---------------------------------- Part 1 -------------------------------------------------------- */}
 
       <div className="flex flex-col items-center justify-center gap-6 ">
@@ -20,17 +25,18 @@ const Process = () => {
       <div className="flex items-center justify-between my-20 h-[600px]">
         {/* -------------------------------- THE IMAGE ------------------------------------------------------ */}
 
-        <div className="w-1/2 flex items-center justify-center bg-blue-800 h-full">
-          <img
-            src="image-url"
+        <div className="w-1/2 flex items-center justify-center h-full">
+        <StyledImage
+            src={meeting}
             alt="Discover"
+            shape={0}
             className="max-h-full max-w-full"
           />
         </div>
 
         {/* ---------------------------------- THE TEXT -------------------------------------------------------- */}
 
-        <div className="w-1/2 bg-blue-400 h-full flex flex-col items-center justify-center gap-8 px-16">
+        <div className="w-1/2 h-full flex flex-col items-center justify-center gap-8 px-16">
           <div className="text-4xl font-bold text-white">Discover</div>
           <div className="text-lg text-gray-100 text-center">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -38,7 +44,7 @@ const Process = () => {
             natus laudantium error enim inventore, deserunt, sed tenetur nobis
             accusamus delectus dicta eveniet voluptate.
           </div>
-        </div>
+          </div>
       </div>
       {/* ---------------------------------- Part 3 -------------------------------------------------------- */}
 
@@ -56,8 +62,13 @@ const Process = () => {
         </div>
         {/* -------------------------------- THE IMAGE ------------------------------------------------------ */}
 
-        <div className="w-1/2 flex items-center justify-center bg-blue-800 h-full">
-          <img src="image-url" alt="Build" className="max-h-full max-w-full" />
+        <div className="w-1/2 flex items-center justify-center h-full">
+        <StyledImage
+            src={code}
+            alt="Build"
+            shape={0}
+            className="max-h-full max-w-full"
+          />
         </div>
       </div>
       {/* ---------------------------------- Part 4 -------------------------------------------------------- */}
@@ -65,10 +76,11 @@ const Process = () => {
       <div className="flex items-center justify-between my-20 h-[600px]">
         {/* -------------------------------- THE IMAGE ------------------------------------------------------ */}
 
-        <div className="w-1/2 flex items-center justify-center bg-blue-800 h-full">
-          <img
-            src="image-url"
+        <div className="w-1/2 flex items-center justify-center h-full">
+        <StyledImage
+            src={whiteboard}
             alt="Deliver"
+            shape={0}
             className="max-h-full max-w-full"
           />
         </div>
