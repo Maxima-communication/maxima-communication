@@ -1,5 +1,7 @@
 "use client";
+
 import React, { useState } from "react";
+import { LampDemo } from "./Lamp";
 
 interface Service {
   title: string;
@@ -39,8 +41,10 @@ const Services = () => {
   return (
     <div className="container max-w-6xl my-16">
       {/* ---------------------------------- Part 1 -------------------------------------------------------- */}
-
-      <div className="flex flex-col items-center justify-center gap-6 w-full">
+      <div>
+        <LampDemo/>
+      </div>
+      {/* <div className="flex flex-col items-center justify-center gap-6 w-full">
         <div className="text-3xl font-bold">Services</div>
         <div className="max-w-6xl mx-auto text-center px-4">
           <p className="leading-relaxed text-gray-200">
@@ -57,7 +61,7 @@ const Services = () => {
           </p>
         </div>
       </div>
-
+ */}
       {/* ---------------------------------- Part 2 -------------------------------------------------------- */}
 
       <div className="flex items-center justify-between mt-10 h-[650px]">
@@ -108,7 +112,7 @@ const Services = () => {
                     </span>
                   </li>
                   {openService === index && (
-                    <p className="text-gray-200 bg-gray-800 text-base p-6 rounded-lg mt-4 shadow-lg border border-gray-600">
+                    <p className="text-gray-200 bg-gradient-to-r from-gray-500 to-gray-900 text-base p-6 rounded-lg mt-4 shadow-lg border border-gray-600 text-justify">
                       {service.details}
                     </p>
                   )}
