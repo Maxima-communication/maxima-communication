@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { LampDemo } from "./Lamp";
+import StyledImage from "./ui/styledimage";
+import code from '../images/code.jpg'
 
 interface Service {
   title: string;
@@ -67,10 +69,11 @@ const Services = () => {
       <div className="flex items-center justify-between mt-10 h-[650px]">
         {/* -------------------------------- THE IMAGE ------------------------------------------------------ */}
 
-        <div className="w-1/2 flex items-center justify-center bg-green-800 h-full">
-          <img
-            src="image-url"
-            alt="Services"
+        <div className="w-1/2 flex items-center justify-center h-full">
+        <StyledImage
+            src={code}
+            alt="Discover"
+            shape={0}
             className="max-h-full max-w-full"
           />
         </div>
