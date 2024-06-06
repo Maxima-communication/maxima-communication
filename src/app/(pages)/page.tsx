@@ -6,6 +6,7 @@ import Process from "@/components/Process";
 import Aboutus from "@/components/Aboutus";
 import { SparklesCore } from "@/components/ui/sparkles";
 
+
 const Bogart = localFont({
   src: "../../../public/assets/fonts/bogart/Bogart-SemiBold-trial.ttf",
 });
@@ -47,7 +48,7 @@ export default function Home() {
             {/* ----------------------------------- THE GLOBE ---------------------------------------------------- */}
 
             <div className="absolute top-0 right-0 h-full w-[800px] overflow-visible -mr-44">
-              <Globe />
+              {/* <Globe /> */}
             </div>
           </div>
         </div>
@@ -72,7 +73,7 @@ export default function Home() {
         <div className="relative z-20">
           {/* ------------------------------------ Services ------------------------------------------------- */}
           <Services />
-
+          {/* <GridBackgroundDemo/> */}
           {/* ------------------------------------ About US ------------------------------------------------- */}
           <Aboutus />
 
