@@ -7,7 +7,7 @@ interface AuthLayoutProps {
 
 export default function PagesLayout({ children }: AuthLayoutProps) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-grid-gray-500/[0.2]">
       <SiteHeader />
       {children}
       <SiteFooter />
