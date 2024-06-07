@@ -72,7 +72,7 @@ const TracingBeam = ({
               backgroundColor: scrollYProgress.get() > 0 ? "white" : "",
               borderColor: scrollYProgress.get() > 0 ? "white" : "",
             }}
-            className="h-2 w-2  border border-white bg-black"
+            className="h-2 w-2 border rounded-full border-white bg-white"
           />
         </motion.div>
         <svg
@@ -125,19 +125,20 @@ const TracingBeam = ({
 
 const Process = () => {
   return (
-    <div className="container max-w-6xl my-36">
-      {/* ---------------------------------- Part 1 -------------------------------------------------------- */}
+    <TracingBeam>
+      <div className="container max-w-6xl my-36">
+        {/* ---------------------------------- Part 1 -------------------------------------------------------- */}
 
-      <div className="flex flex-col items-center justify-center gap-6 ">
-        <div className="text-3xl font-bold">Our Process</div>
-        <div className="max-w-2xl text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore at
-          repellendus beatae fugit reprehenderit quae tenetur praesentium harum
-          aut maxime. Quam voluptatibus vero temporibus soluta quae repellendus
-          aliquid doloremque eaque.
+        <div className="flex flex-col items-center justify-center gap-6 ">
+          <div className="text-3xl font-bold">Our Process</div>
+          <div className="max-w-2xl text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore at
+            repellendus beatae fugit reprehenderit quae tenetur praesentium
+            harum aut maxime. Quam voluptatibus vero temporibus soluta quae
+            repellendus aliquid doloremque eaque.
+          </div>
         </div>
-      </div>
-      <TracingBeam>
+
         {/* ---------------------------------- Part 2 -------------------------------------------------------- */}
 
         <div className="flex items-center justify-between my-20 h-[600px]">
@@ -169,7 +170,7 @@ const Process = () => {
         <div className="flex items-center justify-between my-20 h-[600px]">
           {/* ---------------------------------- THE TEXT -------------------------------------------------------- */}
 
-          <div className="w-1/2 bg-blue-400 h-full flex flex-col items-center justify-center gap-8 px-16">
+          <div className="w-1/2 h-full flex flex-col items-center justify-center gap-8 px-16">
             <div className="text-4xl font-bold text-white">BUILD</div>
             <div className="text-lg text-gray-100 text-center">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -205,7 +206,7 @@ const Process = () => {
 
           {/* ---------------------------------- THE TEXT -------------------------------------------------------- */}
 
-          <div className="w-1/2 bg-blue-400 h-full flex flex-col items-center justify-center gap-8 px-16">
+          <div className="w-1/2 h-full flex flex-col items-center justify-center gap-8 px-16">
             <div className="text-4xl font-bold text-white">DELIVER</div>
             <div className="text-lg text-gray-100 text-center">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -215,8 +216,8 @@ const Process = () => {
             </div>
           </div>
         </div>
-      </TracingBeam>
-    </div>
+      </div>
+    </TracingBeam>
   );
 };
 
