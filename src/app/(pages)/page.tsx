@@ -4,8 +4,8 @@ import Ticker from "@/components/ticker";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
 import Aboutus from "@/components/Aboutus";
+import ContactUs from "@/components/contactUs";
 // import { SparklesCore } from "@/components/ui/sparkles";
-
 
 const Bogart = localFont({
   src: "../../../public/assets/fonts/bogart/Bogart-SemiBold-trial.ttf",
@@ -22,8 +22,6 @@ const Relevance = localFont({
 const Coolvetica = localFont({
   src: "../../../public/assets/fonts/coolvetica/coolvetica rg.otf",
 });
-
-
 
 export default function Home() {
   return (
@@ -85,10 +83,11 @@ export default function Home() {
 
           {/* ------------------------------------ OUR PROCESS ---------------------------------------------- */}
           <Process />
+
+          {/* ------------------------------------ Contact Us ---------------------------------------------- */}
+          <ContactUs />
         </div>
       </div>
-
-      
     </main>
   );
 }
