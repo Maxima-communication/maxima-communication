@@ -130,8 +130,8 @@ const Process = () => {
         {/* ---------------------------------- Part 1 -------------------------------------------------------- */}
 
         <div className="flex flex-col items-center justify-center gap-6 ">
-          <div className="text-3xl font-bold">Our Process</div>
-          <div className="max-w-2xl text-center">
+          <div className="text-3xl font-bold text-white">Our Process</div>
+          <div className="max-w-2xl text-center text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore at
             repellendus beatae fugit reprehenderit quae tenetur praesentium
             harum aut maxime. Quam voluptatibus vero temporibus soluta quae
