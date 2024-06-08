@@ -17,7 +17,7 @@ export function LampDemo() {
         className=""
       >
         <div className="flex flex-col items-center justify-center gap-6 w-full">
-          <div className="text-5xl font-bold mb-6">Services</div>
+          <div className="text-5xl font-bold mb-6 text-white">Services</div>
           <div className="max-w-6xl mx-auto text-center px-4">
             <p className="leading-relaxed text-gray-200">
               Revolutionizing the digital landscape, we offer a holistic suite
@@ -48,7 +48,7 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative flex h-[50vh] flex-col items-center justify-center overflow-hidden bg-black w-full rounded-md z-0", // Change min-h-screen to h-[50vh]
+        "relative flex h-[50vh] flex-col items-center justify-center overflow-hidden w-full rounded-md z-0", // Change min-h-screen to h-[50vh]
         className
       )}
     >
@@ -66,8 +66,8 @@ export const LampContainer = ({
           }}
           className="absolute inset-auto right-1/2 h-28 overflow-visible w-[15rem] bg-gradient-conic from-red-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]" // Change height and initial width
         >
-          <div className="absolute w-[100%] left-0 bg-black h-20 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
-          <div className="absolute w-20 h-[100%] left-0 bg-black bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
+          <div className="absolute w-[100%] left-0 h-20 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
+          <div className="absolute w-20 h-[100%] left-0 bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" , y:40 }}
@@ -82,10 +82,10 @@ export const LampContainer = ({
           }}
           className="absolute inset-auto left-1/2 h-28 w-[15rem] bg-gradient-conic from-transparent via-transparent to-red-500 text-white [--conic-position:from_290deg_at_center_top]" // Change height and initial width
         >
-          <div className="absolute w-20 h-[100%] right-0 bg-black bottom-0 z-20 [mask-image:linear-gradient(to_left,white,transparent)]" />
-          <div className="absolute w-[100%] right-0 bg-black h-20 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
+          <div className="absolute w-20 h-[100%] right-0 bottom-0 z-20 [mask-image:linear-gradient(to_left,white,transparent)]" />
+          <div className="absolute w-[100%] right-0 h-20 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
         </motion.div>
-        <div className="absolute top-1/2 h-24 w-full translate-y-6 scale-x-150 bg-black blur-2xl"></div>{" "}
+        <div className="absolute top-1/2 h-24 w-full translate-y-6 scale-x-150 blur-2xl"></div>{" "}
         {/* Adjusted height and translate-y */}
         <div className="absolute top-1/2 z-50 h-24 w-full bg-transparent opacity-10 backdrop-blur-md"></div>{" "}
         {/* Adjusted height */}
