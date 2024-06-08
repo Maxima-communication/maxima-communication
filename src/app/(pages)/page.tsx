@@ -12,34 +12,34 @@ const Coolvetica = localFont({
   src: "../../../public/assets/fonts/coolvetica/coolvetica rg.otf",
 });
 
+const Hagrid = localFont({
+  src: "../../../public/assets/fonts/hagrid/Hagrid-Text-Extrabold-trial.ttf",
+});
+
 export default function Home() {
   return (
     <main>
-      <div className="mb-24  ">
-        <div className="h-[70vh] w-full justify-center items-center flex px-4 container max-w-6xl relative overflow-hidden">
-          <div className="w-full flex items-center">
-            <div className="w-3/5 -mt-28 space-y-5">
-              <div
-                className={`leading-tight tracking-wide text-5xl text-gray-50 ${Coolvetica.className}`}
+        <div className="h-[70vh] w-full justify-center items-center flex px-4 container max-w-6xl relative">
+            <div className="w-4/5 -mt-28 space-y-5 text-center">
+              <h1
+                className={`leading-tight tracking-wider text-7xl text-gray-100 ${Hagrid.className}`}
               >
                 EXPERIENCE OUR EXPERT AGENCY SERVICES
-              </div>
-              <div
+              </h1>
+              <h6
                 className={`text-xl text-gray-300 leading-relaxed ${Relevance.className}`}
               >
                 We are a digital agency that specializes in building and scaling
                 cutting-edge digital products for startups and industrial giants
-              </div>
-            </div>
+              </h6>
           </div>
         </div>
-      </div>
-      <div className="w-full text-gray-50 text-4xl font-semibold h-16 -mt-10 flex items-center">
+      <div className="w-full text-gray-50 text-4xl font-semibold h-16 flex items-center">
         <Ticker />
       </div>
-      <div className="h-full relative w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <div className="h-full relative w-full flex flex-col items-center justify-center">
         <div className="relative z-20">
-          <Services />
+        <Services />
           <Aboutus />
           <Process />
         </div>
