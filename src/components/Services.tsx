@@ -41,11 +41,9 @@ const Services = () => {
   };
 
   return (
-    <div className="container max-w-6xl my-16">
+    <div className="container my-16">
       {/* ---------------------------------- Part 1 -------------------------------------------------------- */}
-      <div>
         <LampDemo/>
-      </div>
       {/* <div className="flex flex-col items-center justify-center gap-6 w-full">
         <div className="text-3xl font-bold">Services</div>
         <div className="max-w-6xl mx-auto text-center px-4">
