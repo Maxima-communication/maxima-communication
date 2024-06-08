@@ -1,6 +1,10 @@
+"use client";
+
 import SiteFooter from "@/components/layouts/site-footer";
 import SiteHeader from "@/components/layouts/site-header";
 import { Spotlight } from "@/components/ui/spotlight";
+import { motion } from "framer-motion";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 interface AuthLayoutProps {
   children: React.ReactNode;
@@ -8,11 +12,25 @@ interface AuthLayoutProps {
 
 export default function PagesLayout({ children }: AuthLayoutProps) {
   return (
-    <div className="min-h-screen bg-grid-gray-700/[0.2] relative">
-      <Spotlight className="absolute top-0 left-0 w-full h-[calc(100vh+8rem)]" fill="white" />
-      <SiteHeader />
-      {children}
-      <SiteFooter />
+    <div className="relative" >
+      <AuroraBackground>
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="absolute top-0 w-full items-center justify-center"
+        >
+          <div className="bg-grid-gray-700/[0.2]">
+            <SiteHeader />
+            {children}
+            <SiteFooter />
+          </div>
+        </motion.div>
+      </AuroraBackground>
     </div>
   );
 }
