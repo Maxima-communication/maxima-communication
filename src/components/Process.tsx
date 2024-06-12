@@ -1,13 +1,17 @@
 "use client";
+import localFont from "next/font/local";
 import React, { useEffect, useRef, useState } from "react";
-import { motion, useTransform, useScroll, useSpring } from "framer-motion";
-import { cn } from "@/utils/cn";
+/* import { motion, useTransform, useScroll, useSpring } from "framer-motion";
+import { cn } from "@/utils/cn"; */
 import StyledImage from "./ui/styledimage";
 import code from "../images/code.jpg";
 import meeting from "../images/meeting.jpg";
 import whiteboard from "../images/whiteboard.jpg";
+import Image from "next/image";
+import arrow from "../images/arrow.svg";
+import arrowflipped from "../images/arrowflipped.svg";
 
-const TracingBeam = ({
+/* const TracingBeam = ({
   children,
   className,
 }: {
@@ -121,103 +125,162 @@ const TracingBeam = ({
       <div ref={contentRef}>{children}</div>
     </motion.div>
   );
-};
+}; */
+
+const Engebrechtre = localFont({
+  src: "../../public/assets/fonts/engebrechtre/Engebrechtre Bd.otf",
+});
+
+// Testing font
+const TestFont = localFont({
+  src: "../../public/assets/fonts/tabarra/TabarraPro-Light-FFP.ttf",
+});
 
 const Process = () => {
   return (
-    <TracingBeam>
-      <div className="container max-w-6xl my-36">
-        {/* ---------------------------------- Part 1 -------------------------------------------------------- */}
+    // <TracingBeam>
+    <div className="container max-w-6xl mt-36 relative">
+      {/* ---------------------------------- Part 1 -------------------------------------------------------- */}
 
-        <div className="flex flex-col items-center justify-center gap-6 ">
-          <div className="text-3xl font-bold text-white">Our Process</div>
-          <div className="max-w-2xl text-center text-white">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore at
-            repellendus beatae fugit reprehenderit quae tenetur praesentium
-            harum aut maxime. Quam voluptatibus vero temporibus soluta quae
-            repellendus aliquid doloremque eaque.
+      <div className="flex flex-col items-center relative">
+        <h4
+          className={`text-3xl text-white uppercase ${Engebrechtre.className}`}
+        >
+          Our Process
+        </h4>
+        {/* <h6 className={`max-w-2xl text-center font-medium text-gray-200 ${TestFont.className}`}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore at
+        repellendus beatae fugit reprehenderit quae tenetur praesentium
+        harum aut maxime. Quam voluptatibus vero temporibus soluta quae
+        repellendus aliquid doloremque eaque.
+      </h6> */}
+        <div className="absolute bg-dot-white opacity-40 w-80 h-40 translate-x-[199px] translate-y-3" />
+      </div>
+
+      {/* ---------------------------------- Part 2 -------------------------------------------------------- */}
+
+      <div className="flex items-center justify-between my-20 h-[600px] relative">
+        {/* -------------------------------- THE IMAGE ------------------------------------------------------ */}
+
+        <div className="w-1/2 flex items-center justify-center h-full">
+          <StyledImage
+            src={meeting}
+            alt="Discover"
+            shape={0}
+            className="max-h-full max-w-full"
+          />
+        </div>
+
+        {/* ---------------------------------- THE TEXT -------------------------------------------------------- */}
+
+        <div className="w-1/2 h-full flex flex-col items-center justify-center gap-8 px-16">
+          <div
+            className={`text-5xl font-bold text-white ${Engebrechtre.className}`}
+          >
+            Discover
+          </div>
+          <div
+            className={`max-w-2xl text-center font-medium text-gray-200 ${TestFont.className}`}
+          >
+            Our process begins with a thorough discovery phase where we take the
+            time to understand your business, goals, and target audience. We
+            conduct detailed research and analysis to gather all necessary
+            information, ensuring that we have a solid foundation to build upon.
+            This step is crucial as it helps us align our strategies with your
+            vision and objectives, setting the stage for a successful project.
           </div>
         </div>
 
-        {/* ---------------------------------- Part 2 -------------------------------------------------------- */}
+        {/* ---------------------------------- THE ARROW ------------------------------------------------------ */}
+        <Image
+          className="absolute left-1/2 transform -translate-x-1/2 -bottom-44 opacity-25"
+          src={arrow}
+          alt="arrow"
+          width="250"
+        />
+      </div>
 
-        <div className="flex items-center justify-between my-20 h-[600px]">
-          {/* -------------------------------- THE IMAGE ------------------------------------------------------ */}
+      {/* ---------------------------------- Part 3 -------------------------------------------------------- */}
 
-          <div className="w-1/2 flex items-center justify-center h-full">
-            <StyledImage
-              src={meeting}
-              alt="Discover"
-              shape={0}
-              className="max-h-full max-w-full"
-            />
+      <div className="flex items-center justify-between my-20 h-[600px] relative">
+        {/* ---------------------------------- THE TEXT -------------------------------------------------------- */}
+
+        <div className="w-1/2 h-full flex flex-col items-center justify-center gap-8 px-16">
+          <div
+            className={`text-5xl font-bold text-white ${Engebrechtre.className}`}
+          >
+            Build
           </div>
-
-          {/* ---------------------------------- THE TEXT -------------------------------------------------------- */}
-
-          <div className="w-1/2 h-full flex flex-col items-center justify-center gap-8 px-16">
-            <div className="text-4xl font-bold text-white">Discover</div>
-            <div className="text-lg text-gray-100 text-center">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatibus explicabo quia vero neque temporibus? Corporis
-              dolorum natus laudantium error enim inventore, deserunt, sed
-              tenetur nobis accusamus delectus dicta eveniet voluptate.
-            </div>
-          </div>
-        </div>
-        {/* ---------------------------------- Part 3 -------------------------------------------------------- */}
-
-        <div className="flex items-center justify-between my-20 h-[600px]">
-          {/* ---------------------------------- THE TEXT -------------------------------------------------------- */}
-
-          <div className="w-1/2 h-full flex flex-col items-center justify-center gap-8 px-16">
-            <div className="text-4xl font-bold text-white">BUILD</div>
-            <div className="text-lg text-gray-100 text-center">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatibus explicabo quia vero neque temporibus? Corporis
-              dolorum natus laudantium error enim inventore, deserunt, sed
-              tenetur nobis accusamus delectus dicta eveniet voluptate.
-            </div>
-          </div>
-          {/* -------------------------------- THE IMAGE ------------------------------------------------------ */}
-
-          <div className="w-1/2 flex items-center justify-center h-full">
-            <StyledImage
-              src={code}
-              alt="Build"
-              shape={0}
-              className="max-h-full max-w-full"
-            />
+          <div
+            className={`max-w-2xl text-center font-medium text-gray-200 ${TestFont.className}`}
+          >
+            During the build phase, our skilled developers and designers work
+            collaboratively to create a high-quality product. We utilize
+            cutting-edge technologies and best practices to ensure that your
+            website or mobile application is not only visually appealing but
+            also highly functional and user-friendly. Our iterative approach
+            allows for continuous feedback and improvements, ensuring that the
+            final product meets your expectations and standards.
           </div>
         </div>
-        {/* ---------------------------------- Part 4 -------------------------------------------------------- */}
+        {/* -------------------------------- THE IMAGE ------------------------------------------------------ */}
 
-        <div className="flex items-center justify-between my-20 h-[600px]">
-          {/* -------------------------------- THE IMAGE ------------------------------------------------------ */}
+        <div className="w-1/2 flex items-center justify-center h-full">
+          <StyledImage
+            src={code}
+            alt="Build"
+            shape={0}
+            className="max-h-full max-w-full"
+          />
+        </div>
 
-          <div className="w-1/2 flex items-center justify-center h-full">
-            <StyledImage
-              src={whiteboard}
-              alt="Deliver"
-              shape={0}
-              className="max-h-full max-w-full"
-            />
+        {/* ---------------------------------- THE ARROW ------------------------------------------------------ */}
+        <Image
+          className="absolute left-1/2 transform -translate-x-1/2 -bottom-52 opacity-25"
+          src={arrowflipped}
+          alt="arrow"
+          width={250}
+        />
+      </div>
+
+      {/* ---------------------------------- Part 4 -------------------------------------------------------- */}
+
+      <div className="flex items-center justify-between my-20 h-[600px]">
+        {/* -------------------------------- THE IMAGE ------------------------------------------------------ */}
+
+        <div className="w-1/2 flex items-center justify-center h-full">
+          <StyledImage
+            src={whiteboard}
+            alt="Deliver"
+            shape={0}
+            className="max-h-full max-w-full"
+          />
+        </div>
+
+        {/* ---------------------------------- THE TEXT -------------------------------------------------------- */}
+
+        <div className="w-1/2 h-full flex flex-col items-center justify-center gap-8 px-16">
+          <div
+            className={`text-5xl font-bold text-white ${Engebrechtre.className}`}
+          >
+            Deliver
           </div>
-
-          {/* ---------------------------------- THE TEXT -------------------------------------------------------- */}
-
-          <div className="w-1/2 h-full flex flex-col items-center justify-center gap-8 px-16">
-            <div className="text-4xl font-bold text-white">DELIVER</div>
-            <div className="text-lg text-gray-100 text-center">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatibus explicabo quia vero neque temporibus? Corporis
-              dolorum natus laudantium error enim inventore, deserunt, sed
-              tenetur nobis accusamus delectus dicta eveniet voluptate.
-            </div>
+          <div
+            className={`max-w-2xl text-center font-medium text-gray-200 ${TestFont.className}`}
+          >
+            In the deliver phase, we thoroughly test the product to ensure it
+            performs flawlessly across all devices and platforms. Once
+            everything is finalized, we deploy the website or application,
+            ensuring a smooth and seamless launch. Our commitment doesn't end
+            there; we provide ongoing support and maintenance to ensure your
+            digital solution continues to perform optimally, helping you achieve
+            long-term success.
           </div>
         </div>
       </div>
-    </TracingBeam>
+    </div>
+
+    // </TracingBeam>
   );
 };
 
