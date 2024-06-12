@@ -24,7 +24,7 @@ export default function PagesLayout({ children }: AuthLayoutProps) {
           }}
           className="absolute top-0 w-full items-center justify-center"
         >
-          <div className="bg-grid-gray-700/[0.2]">
+          <div className="bg-grid-gray-800/[0.2]">
             <SiteHeader />
             {children}
             <SiteFooter />
