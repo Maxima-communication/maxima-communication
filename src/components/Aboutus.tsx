@@ -13,14 +13,14 @@ const Coolvetica = localFont({
 
 const Aboutus = () => {
   return (
-    <div className="relative container max-w-6xl flex items-center justify-center min-h-screen">
+    <div className="relative container my-32 max-w-6xl flex items-center justify-center min-h-screen">
       {/* Mesh Background Image */}
       <Image
         src={mesh}
         alt="Mesh Background"
         width={800}
         height={700}
-        className="absolute inset-1 object-cover opacity-20 blur-[0.5px] z-[-1] translate-x-28"
+        className="absolute inset-1 object-cover opacity-20 blur-[0.9px] z-[-1] translate-x-28"
       />
       {/* Content */}
       <div className="relative h-96 flex justify-center items-center z-10">
