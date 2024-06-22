@@ -4,13 +4,14 @@ import Services from "@/components/Services";
 import Process from "@/components/process";
 import Aboutus from "@/components/aboutus";
 import ContactUs from "@/components/contactUs";
+import { FlipWords } from "@/components/ui/flip-words";
 
 const Relevance = localFont({
   src: "../../../public/assets/fonts/Relevance-trial-Regular.ttf",
 });
 
-const Hagrid = localFont({
-  src: "../../../public/assets/fonts/hagrid/Hagrid-Text-Extrabold-trial.ttf",
+const ParaFont = localFont({
+  src: "../../../public/assets/fonts/area/AreaNormalTrial-Medium-BF65ea75c66b01c.otf",
 });
 
 // Testing font
@@ -24,23 +25,34 @@ const FlippedFont = localFont({
 });
 
 export default function Home() {
+  const words = [
+    "Builders",
+    "Architects",
+    "Creators",
+    "Designers",
+    "Engineers",
+  ];
+
   return (
     <main>
-      <div className="h-[70vh] w-full my-14 justify-center items-center flex px-4 container max-w-6xl relative">
-        <div className="w-4/5 -mt-28 space-y-5 text-center">
+      <div className="h-[70vh] w-full justify-center items-center flex px-4 container max-w-6xl relative">
+        <div className="w-4/5 -mt-20 space-y-5 text-center">
           <h1
             className={`leading-tighter text-9xl text-white opacity-95 ${TestFont.className}`}
           >
             Voice your{` `}
-            <span className={`${FlippedFont.className}`}>
-            vision
-            </span>
+            <span className={`${FlippedFont.className}`}>vision</span>
           </h1>
           <h6
-            className={`text-xl text-gray-200 leading-relaxed ${Relevance.className}`}
+            className={`text-xl mx-auto text-neutral-100 tracking-wide ${ParaFont.className}`}
           >
-            We are a digital agency that specializes in building and scaling
-            cutting-edge digital products for startups and industrial giants
+            {/* Digital
+            <FlipWords words={words} /> */}
+            Jumpstart Your Project with a{" "}
+            <span className={`font-semibold`}>
+            FREE
+            </span>{" "}
+             Consultation
           </h6>
         </div>
       </div>
