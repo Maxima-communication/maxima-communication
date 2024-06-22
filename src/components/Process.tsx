@@ -144,7 +144,7 @@ const Process = () => {
 
       <div className="flex flex-col items-center relative">
         <h4
-          className={`text-3xl text-white uppercase ${Engebrechtre.className}`}
+          className={`text-4xl text-white uppercase ${Engebrechtre.className}`}
         >
           Our Process
         </h4>
