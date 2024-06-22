@@ -88,7 +88,7 @@ const Services = () => {
     <div className="container mt-32 my-16">
       <div className="flex flex-col items-center relative">
         <h4
-          className={`text-3xl mt-16 mb-20 text-center text-white uppercase ${Engebrechtre.className}`}
+          className={`text-4xl mt-16 mb-20 text-center text-white uppercase ${Engebrechtre.className}`}
         >
           Our Services
         </h4>
@@ -172,7 +172,7 @@ const Services = () => {
           </div>
         </div>
       </div> */}
-      <div className="max-w-5xl">
+      <div className="max-w-5xl ">
         <dl className="mt-3">
           {services.map((service, index) => {
             const isOpen = selected === index;
@@ -237,7 +237,9 @@ const Services = () => {
                 </dt>
                 {isOpen && (
                   <dd className="pb-10 pr-6" id={service.id}>
-                    <p className={`text-gray-300 text-lg ${TestFont.className}`}>
+                    <p
+                      className={`text-gray-300 text-lg ${TestFont.className}`}
+                    >
                       {service.description}
                     </p>
                   </dd>
