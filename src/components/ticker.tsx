@@ -10,41 +10,49 @@ const TestFont = localFont({
 const Ticker = () => {
   return (
     <div className={`marquee ${TestFont.className}`}>
-      <ul className="marquee__content text-5xl">
-        <li>DISCUSS YOUR IDEAS</li>
+      <ul className="marquee__content uppercase text-neutral-200 text-5xl">
+        <li className="ml-4">Discuss your ideas</li>
         <li>
-          <Icons.star />
+          <Icons.ticker1/>
         </li>
-        <li>DISCUSS YOUR IDEAS</li>
+        <li>Innovate with us</li>
         <li>
-          <Icons.star />
+          <Icons.ticker2/>
         </li>
-        <li>DISCUSS YOUR IDEAS</li>
+        <li>Elevate your brand</li>
         <li>
-          <Icons.star />
+          <Icons.ticker3/>
         </li>
-        <li>DISCUSS YOUR IDEAS</li>
+        <li>Transform your business</li>
         <li>
-          <Icons.star />
+          <Icons.ticker4/>
+        </li>
+        <li>Design your solutions</li>
+        <li>
+          <Icons.ticker5/>
         </li>
       </ul>
       {/* Mirrors the content above */}
-      <ul className="marquee__content text-5xl" aria-hidden="true">
-        <li>DISCUSS YOUR IDEAS</li>
+      <ul className="marquee__content uppercase text-neutral-200 text-5xl" aria-hidden="true">
+      <li className="ml-4">Discuss your ideas</li>
         <li>
-          <Icons.star />
+          <Icons.ticker1/>
         </li>
-        <li>DISCUSS YOUR IDEAS</li>
+        <li>Innovate with us</li>
         <li>
-          <Icons.star />
+          <Icons.ticker2/>
         </li>
-        <li>DISCUSS YOUR IDEAS</li>
+        <li>Elevate your brand</li>
         <li>
-          <Icons.star />
+          <Icons.ticker3/>
         </li>
-        <li>DISCUSS YOUR IDEAS</li>
+        <li>Transform your business</li>
         <li>
-          <Icons.star />
+          <Icons.ticker4/>
+        </li>
+        <li>Design your solutions</li>
+        <li>
+          <Icons.ticker5/>
         </li>
       </ul>
     </div>
