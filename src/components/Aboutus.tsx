@@ -20,7 +20,7 @@ const Aboutus = () => {
         alt="Mesh Background"
         width={800}
         height={700}
-        className="absolute inset-1 object-cover opacity-20 blur-[0.9px] z-[-1] translate-x-28"
+        className="absolute inset-1 object-cover opacity-20 blur-[1.5px] z-[-1] translate-x-28"
       />
       {/* Content */}
       <div className="relative h-96 flex justify-center items-center z-10">
