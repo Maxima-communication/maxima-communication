@@ -48,6 +48,7 @@ export default function Home() {
           >
             {/* Digital
             <FlipWords words={words} /> */}
+
             Jumpstart Your Project with a{" "}
             <span className={`font-semibold`}>
             FREE
