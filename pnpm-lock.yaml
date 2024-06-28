@@ -4,113 +4,114 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-importers:
+dependencies:
+  '@emailjs/browser':
+    specifier: ^4.3.3
+    version: 4.3.3
+  '@radix-ui/react-avatar':
+    specifier: ^1.0.4
+    version: 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.53)(react-dom@18.2.0)(react@18.2.0)
+  '@radix-ui/react-dropdown-menu':
+    specifier: ^2.0.6
+    version: 2.0.6(@types/react-dom@18.2.18)(@types/react@18.2.53)(react-dom@18.2.0)(react@18.2.0)
+  '@radix-ui/react-icons':
+    specifier: ^1.3.0
+    version: 1.3.0(react@18.2.0)
+  '@radix-ui/react-slot':
+    specifier: ^1.0.2
+    version: 1.0.2(@types/react@18.2.53)(react@18.2.0)
+  '@react-three/drei':
+    specifier: ^9.99.5
+    version: 9.99.5(@react-three/fiber@8.15.16)(@types/react@18.2.53)(@types/three@0.162.0)(react-dom@18.2.0)(react@18.2.0)(three@0.162.0)
+  '@react-three/fiber':
+    specifier: ^8.15.16
+    version: 8.15.16(react-dom@18.2.0)(react@18.2.0)(three@0.162.0)
+  '@t3-oss/env-nextjs':
+    specifier: ^0.7.3
+    version: 0.7.3(typescript@5.3.3)(zod@3.22.4)
+  '@tsparticles/engine':
+    specifier: ^3.4.0
+    version: 3.4.0
+  '@tsparticles/react':
+    specifier: ^3.0.0
+    version: 3.0.0(@tsparticles/engine@3.4.0)(react-dom@18.2.0)(react@18.2.0)
+  '@tsparticles/slim':
+    specifier: ^3.4.0
+    version: 3.4.0
+  '@types/three':
+    specifier: ^0.162.0
+    version: 0.162.0
+  class-variance-authority:
+    specifier: ^0.7.0
+    version: 0.7.0
+  clsx:
+    specifier: ^2.1.0
+    version: 2.1.0
+  framer-motion:
+    specifier: ^10.18.0
+    version: 10.18.0(react-dom@18.2.0)(react@18.2.0)
+  lucide-react:
+    specifier: ^0.284.0
+    version: 0.284.0(react@18.2.0)
+  mini-svg-data-uri:
+    specifier: ^1.4.4
+    version: 1.4.4
+  next:
+    specifier: 14.0.4
+    version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
+  next-themes:
+    specifier: ^0.2.1
+    version: 0.2.1(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)
+  react:
+    specifier: ^18.2.0
+    version: 18.2.0
+  react-dom:
+    specifier: ^18.2.0
+    version: 18.2.0(react@18.2.0)
+  react-slick:
+    specifier: ^0.30.2
+    version: 0.30.2(react-dom@18.2.0)(react@18.2.0)
+  tailwind-merge:
+    specifier: ^1.14.0
+    version: 1.14.0
+  tailwindcss-animate:
+    specifier: ^1.0.7
+    version: 1.0.7(tailwindcss@3.4.1)
+  three:
+    specifier: ^0.162.0
+    version: 0.162.0
+  zod:
+    specifier: ^3.22.4
+    version: 3.22.4
 
-  .:
-    dependencies:
-      '@radix-ui/react-avatar':
-        specifier: ^1.0.4
-        version: 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.53)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-dropdown-menu':
-        specifier: ^2.0.6
-        version: 2.0.6(@types/react-dom@18.2.18)(@types/react@18.2.53)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-icons':
-        specifier: ^1.3.0
-        version: 1.3.0(react@18.2.0)
-      '@radix-ui/react-slot':
-        specifier: ^1.0.2
-        version: 1.0.2(@types/react@18.2.53)(react@18.2.0)
-      '@react-three/drei':
-        specifier: ^9.99.5
-        version: 9.99.5(@react-three/fiber@8.15.16)(@types/react@18.2.53)(@types/three@0.162.0)(react-dom@18.2.0)(react@18.2.0)(three@0.162.0)
-      '@react-three/fiber':
-        specifier: ^8.15.16
-        version: 8.15.16(react-dom@18.2.0)(react@18.2.0)(three@0.162.0)
-      '@t3-oss/env-nextjs':
-        specifier: ^0.7.3
-        version: 0.7.3(typescript@5.3.3)(zod@3.22.4)
-      '@tsparticles/engine':
-        specifier: ^3.4.0
-        version: 3.4.0
-      '@tsparticles/react':
-        specifier: ^3.0.0
-        version: 3.0.0(@tsparticles/engine@3.4.0)(react-dom@18.2.0)(react@18.2.0)
-      '@tsparticles/slim':
-        specifier: ^3.4.0
-        version: 3.4.0
-      '@types/three':
-        specifier: ^0.162.0
-        version: 0.162.0
-      class-variance-authority:
-        specifier: ^0.7.0
-        version: 0.7.0
-      clsx:
-        specifier: ^2.1.0
-        version: 2.1.0
-      framer-motion:
-        specifier: ^10.18.0
-        version: 10.18.0(react-dom@18.2.0)(react@18.2.0)
-      lucide-react:
-        specifier: ^0.284.0
-        version: 0.284.0(react@18.2.0)
-      mini-svg-data-uri:
-        specifier: ^1.4.4
-        version: 1.4.4
-      next:
-        specifier: 14.0.4
-        version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
-      next-themes:
-        specifier: ^0.2.1
-        version: 0.2.1(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-      react-slick:
-        specifier: ^0.30.2
-        version: 0.30.2(react-dom@18.2.0)(react@18.2.0)
-      tailwind-merge:
-        specifier: ^1.14.0
-        version: 1.14.0
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.1)
-      three:
-        specifier: ^0.162.0
-        version: 0.162.0
-      zod:
-        specifier: ^3.22.4
-        version: 3.22.4
-    devDependencies:
-      '@biomejs/biome':
-        specifier: ^1.5.3
-        version: 1.5.3
-      '@types/node':
-        specifier: ^20.11.16
-        version: 20.11.16
-      '@types/react':
-        specifier: ^18.2.53
-        version: 18.2.53
-      '@types/react-dom':
-        specifier: ^18.2.18
-        version: 18.2.18
-      '@types/react-slick':
-        specifier: ^0.23.13
-        version: 0.23.13
-      autoprefixer:
-        specifier: ^10.4.17
-        version: 10.4.17(postcss@8.4.33)
-      postcss:
-        specifier: ^8.4.33
-        version: 8.4.33
-      tailwindcss:
-        specifier: ^3.4.1
-        version: 3.4.1
-      typescript:
-        specifier: ^5.3.3
-        version: 5.3.3
+devDependencies:
+  '@biomejs/biome':
+    specifier: ^1.5.3
+    version: 1.5.3
+  '@types/node':
+    specifier: ^20.11.16
+    version: 20.11.16
+  '@types/react':
+    specifier: ^18.2.53
+    version: 18.2.53
+  '@types/react-dom':
+    specifier: ^18.2.18
+    version: 18.2.18
+  '@types/react-slick':
+    specifier: ^0.23.13
+    version: 0.23.13
+  autoprefixer:
+    specifier: ^10.4.17
+    version: 10.4.17(postcss@8.4.33)
+  postcss:
+    specifier: ^8.4.33
+    version: 8.4.33
+  tailwindcss:
+    specifier: ^3.4.1
+    version: 3.4.1
+  typescript:
+    specifier: ^5.3.3
+    version: 5.3.3
 
 packages:
 
@@ -174,8 +175,16 @@ packages:
     engines: {node: '>=14.*'}
     cpu: [x64]
     os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
 
-  '@emotion/is-prop-valid@0.8.8':
+  /@emailjs/browser@4.3.3:
+    resolution: {integrity: sha512-ltpt2S/WVREIBXptxYAVYBvXb2O6yTUYiRUWF8OLikMxlmiGsIgKpgHppikNd4Df0uAav7jCsQKcOJ3TJFUx5g==}
+    engines: {node: '>=14.0.0'}
+    dev: false
+
+  /@emotion/is-prop-valid@0.8.8:
     resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==}
 
   '@emotion/memoize@0.7.4':
