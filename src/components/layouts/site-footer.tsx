@@ -26,20 +26,20 @@ export default function SiteFooter() {
       </Link>
     </div>
     <div className="flex w-full flex-col items-center justify-between gap-5 pt-8 sm:flex-row py-14">
-      <p className={`text-sm text-gray-100 ${TestFont.className}`}>
+      <p className={`text-sm text-gray-300 ${TestFont.className}`}>
         Copyright {" "} © {" "} {new Date().getFullYear()}{" "} — {" "}
-        <a href="/" className=" text-violet-300 hover:text-violet-500 ">
-          Maxima Securidad
+        <a href="/" className=" text-violet-400 opacity-100 hover:opacity-80 ">
+          Maxima Communication
         </a>{" "}
       </p>
       <div className="flex gap-4">
-        <Link href="https://linkedin.com/P8GXYyH3ZU">
+        <Link href="https://linkedin.com/P8GXYyH3ZU" className="opacity-75 hover:opacity-100">
           <Linkedin stroke="white">Join us on Linkedin</Linkedin>
         </Link>
-        <Link href="http://facebook.com/maximacommunication">
+        <Link href="http://facebook.com/maximacommunication" className="opacity-75 hover:opacity-100">
           <Facebook stroke="white">Join us on Facebook</Facebook>
         </Link>
-        <Link href="http://instagram.com/maximacommunication">
+        <Link href="http://instagram.com/maximacommunication" className="opacity-75 hover:opacity-100">
           <Instagram stroke="white">Join us on Instagram</Instagram>
         </Link>
         {/* <Link href="https://x.com/maximacommunication">
