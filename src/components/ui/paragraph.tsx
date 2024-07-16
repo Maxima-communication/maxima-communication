@@ -39,7 +39,7 @@ const Char: React.FC<CharProps> = ({ children, progress, range }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
     <span className="relative inline-block">
-      <span className="absolute opacity-20">{children}</span>
+      <span className="absolute opacity-10">{children}</span>
       <motion.span style={{ opacity }}>{children}</motion.span>
     </span>
   );
