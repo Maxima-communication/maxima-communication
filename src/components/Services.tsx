@@ -2,44 +2,14 @@
 
 import React, { useState } from "react";
 import localFont from "next/font/local";
-// import { LampDemo } from "./Lamp";
-import StyledImage from "./ui/styledimage";
-import code from "../images/code.jpg";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-/* 
-interface Service {
-  title: string;
-  details: string;
-}
-
-const services: Service[] = [
-  {
-    title: "Web Development",
-    details:
-      "Transform your vision into reality with our comprehensive web development services. We specialize in creating custom websites that are not only visually appealing but also highly functional and user-friendly. ",
-  },
-  {
-    title: "Mobile Development",
-    details:
-      "Empower your business with our cutting-edge mobile development services. We create intuitive, high-performance mobile applications for iOS and Android platforms, designed to engage users and drive growth.",
-  },
-  {
-    title: "UI/UX Design",
-    details:
-      "Enhance user satisfaction and engagement with our expert UI/UX design services. We specialize in creating intuitive and visually compelling interfaces that provide seamless user experiences. Our design process focuses on understanding your users and their needs to deliver solutions that are both functional and aesthetically pleasing.",
-  },
-  {
-    title: "Web Marketing",
-    details:
-      "Boost your online presence with our expert web marketing services. We specialize in creating tailored strategies that drive traffic, increase engagement, and convert visitors into loyal customers. Our team utilizes the latest tools and techniques in SEO, social media marketing, content marketing, and PPC advertising to ensure your business stands out in the digital landscape.",
-  },
-]; */
-
+// Import your custom fonts
 const Engebrechtre = localFont({
   src: "../../public/assets/fonts/engebrechtre/Engebrechtre Bd.otf",
 });
 
-// Testing font
 const TestFont = localFont({
   src: "../../public/assets/fonts/area/AreaNormalTrial-Semibold-BF65ea75c6b547e.otf",
 });
@@ -72,64 +42,93 @@ const services = [
 ];
 
 const Services = () => {
-  /* const [openService, setOpenService] = useState<number | null>(null);
-
-  const toggleService = (index: number) => {
-    setOpenService(openService === index ? null : index);
-  }; */
-
   const [selected, setSelected] = useState(null);
 
   const toggle = (value: any) => {
     setSelected(selected === value ? null : value);
   };
 
-  return (
-    <div className="container mt-32 my-16">
-  <div className="flex flex-col items-center">
-    <h4
-      className={`text-4xl mt-16 mb-20 text-center text-white uppercase ${Engebrechtre.className}`}
-    >
-      Our Services
-    </h4>
-    {/* <div className="absolute bg-dot-white opacity-40 w-80 h-40 translate-x-[199px] translate-y-20" /> */}
-  </div>
-  <div className="flex justify-center">
-    <div className="max-w-5xl">
-      <dl className="mt-3">
-        {services.map((service, index) => {
-          const isOpen = selected === index;
-          const isNextOpen = selected === index + 1;
+  // Animation controls
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
 
-          return (
-            <div
-              key={service.id}
-              className={`rounded-3xl px-4 transition ${
-                isOpen ? "bg-gray-400/10" : ""
-              }`}
-            >
-              <dt
-                className={`border-b py-4 text-lg transition ${
-                  isOpen || isNextOpen
-                    ? "border-transparent"
-                    : "border-gray-700 border-opacity-50"
-                }`}
-              >
-                <button
-                  type="button"
-                  className="group block w-full py-6 text-left transition focus-visible:outline-none"
-                  aria-controls={service.id}
-                  onClick={() => toggle(index)}
-                  aria-expanded={isOpen}
+  React.useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  return (
+    <motion.div
+      className="container mt-24 my-16"
+      ref={ref}
+      variants={containerVariants}
+      initial="hidden"
+      animate={controls}
+    >
+      <div className="flex flex-col items-center">
+        <h4
+          className={`text-4xl mt-16 mb-20 text-center text-white uppercase ${Engebrechtre.className}`}
+        >
+          Our Services
+        </h4>
+      </div>
+      <div className="flex justify-center">
+        <div className="max-w-5xl">
+          <dl className="mt-3">
+            {services.map((service, index) => {
+              const isOpen = selected === index;
+              const isNextOpen = selected === index + 1;
+
+              return (
+                <motion.div
+                  key={service.id}
+                  className={`rounded-3xl px-4 transition ${
+                    isOpen ? "bg-gray-400/10" : ""
+                  }`}
+                  variants={itemVariants}
                 >
-                  <div className="group-focus-visible:outline-gray-200 flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
-                    <span
-                      className={`text-6xl text-gray-200 ${TestFont.className}`}
+                  <dt
+                    className={`border-b py-4 text-lg transition ${
+                      isOpen || isNextOpen
+                        ? "border-transparent"
+                        : "border-gray-700 border-opacity-50"
+                    }`}
+                  >
+                    <button
+                      type="button"
+                      className="group block w-full py-6 text-left transition focus-visible:outline-none"
+                      aria-controls={service.id}
+                      onClick={() => toggle(index)}
+                      aria-expanded={isOpen}
                     >
-                      {service.name}
-                    </span>
-                    <span className="ml-64 flex h-7 items-center">
-                      <svg
+                      <div className="group-focus-visible:outline-gray-200 flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
+                        <span
+                          className={`text-6xl text-gray-200 ${TestFont.className}`}
+                        >
+                          {service.name}
+                        </span>
+                        <span className="ml-64 flex h-7 items-center">
+                        <svg
                         className={`transform transition duration-200 ease-in-out ${
                           isOpen ? "rotate-90" : "rotate-0"
                         }`}
@@ -154,26 +153,24 @@ const Services = () => {
                           stroke="white"
                         />
                       </svg>
-                    </span>
-                  </div>
-                </button>
-              </dt>
-              {isOpen && (
-                <dd className="pb-10 pr-6" id={service.id}>
-                  <p
-                    className={`text-gray-300 text-lg ${TestFont.className}`}
-                  >
-                    {service.description}
-                  </p>
-                </dd>
-              )}
-            </div>
-          );
-        })}
-      </dl>
-    </div>
-  </div>
-</div>
+                        </span>
+                      </div>
+                    </button>
+                  </dt>
+                  {isOpen && (
+                    <dd className="pb-10 pr-6" id={service.id}>
+                      <p className={`text-gray-300 text-lg ${TestFont.className}`}>
+                        {service.description}
+                      </p>
+                    </dd>
+                  )}
+                </motion.div>
+              );
+            })}
+          </dl>
+        </div>
+      </div>
+    </motion.div>
   );
 };
 
