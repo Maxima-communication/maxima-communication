@@ -6,6 +6,17 @@ const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
+
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -21,19 +32,16 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
-      // Added background grid classes for dark and light modes
-      extend: {
-        dark: {
-          backgroundImage: `url("${svgToDataUri(
-            `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="white" opacity="0.2"><path d="M0 .5H31.5V32"/></svg>`
-          )}")`,
-        },
-        backgroundImage: `url("${svgToDataUri(
+    },
+    extend: {
+      backgroundImage: {
+        'dark': `url("${svgToDataUri(
+          `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="white" opacity="0.2"><path d="M0 .5H31.5V32"/></svg>`
+        )}")`,
+        'light': `url("${svgToDataUri(
           `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="black" opacity="0.2"><path d="M0 .5H31.5V32"/></svg>`
         )}")`,
       },
-    },
-    extend: {
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -76,8 +84,28 @@ module.exports = {
       },
       keyframes: {
         'logo-cloud': {
-       from: { transform: 'translateX(0)' },
-       to: { transform: 'translateX(calc(-100% - 4rem))' },
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-100% - 4rem))' },
+        },
+        meteor: {
+          "0%": {
+            transform: "rotate(215deg) translateY(100px) translateX(1000px)",
+          },
+          "70%": {},
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px) translateY(-500px)",
+          },
+        },
+        "shine-pulse": {
+          "0%": {
+            "background-position": "0% 0%",
+          },
+          "50%": {
+            "background-position": "100% 100%",
+          },
+          to: {
+            "background-position": "0% 0%",
+          },
         },
         "accordion-down": {
           from: { height: 0 },
@@ -107,11 +135,12 @@ module.exports = {
         },
       },
       animation: {
+        meteor: 'meteor 8s linear infinite',
         aurora: "aurora 60s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         spotlight: "spotlight 2s ease .75s 1 forwards",
-        'logo-cloud': 'logo-cloud 30s linear infinite', // Adjust duration and timing as needed for your design.
+        'logo-cloud': 'logo-cloud 30s linear infinite',
       },
     },
   },
@@ -142,14 +171,3 @@ module.exports = {
     },
   ],
 };
-
-function addVariablesForColors({ addBase, theme }) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
-
-  addBase({
-    ":root": newVars,
-  });
-}
