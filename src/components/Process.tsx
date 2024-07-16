@@ -16,7 +16,7 @@ const Engebrechtre = localFont({
 
 // Testing font
 const TestFont = localFont({
-  src: "../../public/assets/fonts/tabarra/TabarraPro-Light-FFP.ttf",
+  src: "../../public/assets/fonts/area/AreaNormalTrial-Light-BF65ea75c6c87b9.otf",
 });
 
 const Process = () => {
@@ -48,7 +48,7 @@ const Process = () => {
             <AnimatedText text="Discover" />
           </div>
           <div className={`max-w-2xl text-center font-medium text-gray-200 ${TestFont.className}`}>
-            <AnimatedText text="Our process begins with a thorough discovery phase where we take the time to understand your business, goals, and target audience. We conduct detailed research and analysis to gather all necessary information, ensuring that we have a solid foundation to build upon. This step is crucial as it helps us align our strategies with your vision and objectives, setting the stage for a successful project." />
+             <p>Our process begins with a thorough discovery phase where we take the time to understand your business, goals, and target audience. We conduct detailed research and analysis to gather all necessary information, ensuring that we have a solid foundation to build upon. This step is crucial as it helps us align our strategies with your vision and objectives, setting the stage for a successful project.</p>
           </div>
         </div>
 
@@ -69,7 +69,7 @@ const Process = () => {
             <AnimatedText text="Build" />
           </div>
           <div className={`max-w-2xl text-center font-medium text-gray-200 ${TestFont.className}`}>
-            <AnimatedText text="During the build phase, our skilled developers and designers work collaboratively to create a high-quality product. We utilize cutting-edge technologies and best practices to ensure that your website or mobile application is not only visually appealing but also highly functional and user-friendly. Our iterative approach allows for continuous feedback and improvements, ensuring that the final product meets your expectations and standards." />
+            <p>During the build phase, our skilled developers and designers work collaboratively to create a high-quality product. We utilize cutting-edge technologies and best practices to ensure that your website or mobile application is not only visually appealing but also highly functional and user-friendly. Our iterative approach allows for continuous feedback and improvements, ensuring that the final product meets your expectations and standards.</p>
           </div>
         </div>
         
@@ -108,7 +108,7 @@ const Process = () => {
             <AnimatedText text="Deliver" />
           </div>
           <div className={`max-w-2xl text-center font-medium text-gray-200 ${TestFont.className}`}>
-            <AnimatedText text="In the deliver phase, we thoroughly test the product to ensure it performs flawlessly across all devices and platforms. Once everything is finalized, we deploy the website or application, ensuring a smooth and seamless launch. Our commitment doesn't end there; we provide ongoing support and maintenance to ensure your digital solution continues to perform optimally, helping you achieve your goals and long-term success." />
+            <p>In the deliver phase, we thoroughly test the product to ensure it performs flawlessly across all devices and platforms. Once everything is finalized, we deploy the website or application, ensuring a smooth and seamless launch. Our commitment doesn't end there; we provide ongoing support and maintenance to ensure your digital solution continues to perform optimally, helping you achieve your goals and long-term success.</p>
           </div>
         </div>
       </div>
