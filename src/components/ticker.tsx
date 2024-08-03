@@ -11,48 +11,48 @@ const Ticker = () => {
   return (
     <div className={`marquee ${TestFont.className}`}>
       <ul className="marquee__content uppercase text-neutral-200 text-5xl">
-        <li className="ml-4">Discuss your ideas</li>
-        <li>
-          <Icons.ticker1/>
+        <li className="marquee__item">Discuss your ideas</li>
+        <li className="marquee__item">
+          <Icons.ticker1 />
         </li>
-        <li>Innovate with us</li>
-        <li>
-          <Icons.ticker2/>
+        <li className="marquee__item">Innovate with us</li>
+        <li className="marquee__item">
+          <Icons.ticker2 />
         </li>
-        <li>Elevate your brand</li>
-        <li>
-          <Icons.ticker3/>
+        <li className="marquee__item">Elevate your brand</li>
+        <li className="marquee__item">
+          <Icons.ticker3 />
         </li>
-        <li>Transform your business</li>
-        <li>
-          <Icons.ticker4/>
+        <li className="marquee__item">Transform your business</li>
+        <li className="marquee__item">
+          <Icons.ticker4 />
         </li>
-        <li>Design your solutions</li>
-        <li>
-          <Icons.ticker5/>
+        <li className="marquee__item">Design your solutions</li>
+        <li className="marquee__item">
+          <Icons.ticker5 />
         </li>
       </ul>
       {/* Mirrors the content above */}
       <ul className="marquee__content uppercase text-neutral-200 text-5xl" aria-hidden="true">
-      <li className="ml-4">Discuss your ideas</li>
-        <li>
-          <Icons.ticker1/>
+        <li className="marquee__item">Discuss your ideas</li>
+        <li className="marquee__item">
+          <Icons.ticker1 />
         </li>
-        <li>Innovate with us</li>
-        <li>
-          <Icons.ticker2/>
+        <li className="marquee__item">Innovate with us</li>
+        <li className="marquee__item">
+          <Icons.ticker2 />
         </li>
-        <li>Elevate your brand</li>
-        <li>
-          <Icons.ticker3/>
+        <li className="marquee__item">Elevate your brand</li>
+        <li className="marquee__item">
+          <Icons.ticker3 />
         </li>
-        <li>Transform your business</li>
-        <li>
-          <Icons.ticker4/>
+        <li className="marquee__item">Transform your business</li>
+        <li className="marquee__item">
+          <Icons.ticker4 />
         </li>
-        <li>Design your solutions</li>
-        <li>
-          <Icons.ticker5/>
+        <li className="marquee__item">Design your solutions</li>
+        <li className="marquee__item">
+          <Icons.ticker5 />
         </li>
       </ul>
     </div>
