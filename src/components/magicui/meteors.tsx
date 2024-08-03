@@ -29,7 +29,7 @@ export const Meteors = ({ number = 20 }: MeteorsProps) => {
         <span
           key={idx}
           className={cn(
-            "pointer-events-none absolute left-1/2 top-1/2 size-1.2 rotate-[215deg] animate-meteor rounded-full bg-purple-800 shadow-[0_0_0_1px_#ffffff10]",
+            "pointer-events-none absolute left-1/2 top-1/2 size-[0.5px] rotate-[215deg] animate-meteor rounded-full bg-purple-800 shadow-[0_0_0_1px_#ffffff10]"
           )}
           style={style}
         >
