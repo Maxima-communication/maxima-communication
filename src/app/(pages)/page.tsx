@@ -1,10 +1,9 @@
 import localFont from "next/font/local";
 import Ticker from "@/components/ticker";
 import Services from "@/components/Services";
-import Process from "@/components/Process";
-import Aboutus from "@/components/Aboutus";
+import Process from "@/components/process";
+import Aboutus from "@/components/aboutus";
 import ContactUs from "@/components/contactUs";
-import { FlipWords } from "@/components/ui/flip-words";
 import {AnimatedLogoCloud} from "@/components/cloud-logo";
 import Hero from "@/components/hero";
 
