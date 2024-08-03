@@ -12,7 +12,6 @@ const Relevance = localFont({
 });
 
 export default function Home() {
-
   return (
     <main>
       <Hero />
@@ -20,8 +19,8 @@ export default function Home() {
       <div className="h-full relative w-screen flex flex-col items-center justify-center">
         <div className="relative z-20">
           <Services />
-          <div className="w-screen text-gray-50 text-4xl font-semibold h-16 flex items-center pb-24 pt-36">
-          <Ticker />
+          <div className="w-full max-w-[700px] sm:max-w-[850px] md:max-w-[900px] lg:max-w-none lg:w-screen text-gray-50 text-4xl font-semibold h-16 flex items-center pb-24 pt-36">
+            <Ticker />
           </div>
           <Aboutus />
           <Process />

@@ -79,6 +79,30 @@
     transform: translateX(calc(-100% - var(--gap)));
   }
 }
+@media (max-width: 1200px) {
+  .marquee__item {
+    @apply text-4xl; /* Adjust text size for large screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .marquee__item {
+    @apply text-3xl; /* Adjust text size for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee__item {
+    @apply text-2xl; /* Adjust text size for small screens */
+  }
+}
+
+@media (max-width: 576px) {
+
+  .marquee__item {
+    @apply text-xl; /* Adjust text size for extra small screens */
+  }
+}
 
 /* styles.css */
 .text-container {
