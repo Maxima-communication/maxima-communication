@@ -78,8 +78,11 @@ const GradientCursor: React.FC<GradientCursorProps> = ({ isHovered }) => {
                     }}
                     className="top-0 left-0 fixed rounded-full mix-blend-difference"
                     key={i}
-                    ref={(ref) => (circles.current[i] = ref)}
-                />
+                    ref={(ref) => {
+                        if (ref) {
+                            circles.current[i] = ref;
+                        }
+                    }}                />
             ))}
         </div>
     );

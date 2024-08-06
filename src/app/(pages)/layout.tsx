@@ -2,7 +2,6 @@
 
 import SiteFooter from "@/components/layouts/site-footer";
 import SiteHeader from "@/components/layouts/site-header";
-import { Spotlight } from "@/components/ui/spotlight";
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 
