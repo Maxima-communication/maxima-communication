@@ -46,7 +46,7 @@ const Process = () => {
         </div>
         <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center gap-8 px-4 lg:px-16">
           <div
-            className={`text-3xl lg:text-5xl font-bold text-white text-center lg:text-left ${Engebrechtre.className}`}
+            className={`text-5xl font-bold text-white text-center lg:text-left ${Engebrechtre.className}`}
           >
             <AnimatedText text="Discover" />
           </div>
@@ -73,7 +73,7 @@ const Process = () => {
       <div className="flex flex-col-reverse lg:flex-row items-center justify-between my-20 mt-52 sm:mt-56 md:mt-60 lg:mt-10  min-h-[600px] relative">
         <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center gap-8 px-4 lg:px-16 order-2 lg:order-1 mb-8 lg:mb-0">
           <div
-            className={`text-3xl lg:text-5xl font-bold text-white text-center lg:text-left ${Engebrechtre.className}`}
+            className={`text-5xl font-bold text-white text-center lg:text-left ${Engebrechtre.className}`}
           >
             <AnimatedText text="Build" />
           </div>
@@ -100,12 +100,12 @@ const Process = () => {
           />
         </div>
       </div>
-      <div className="absolute left-1/2 top-[1700px] sm:top-[1850px] md:top-[2150px] lg:top-[1320px] transform -translate-x-1/2 -bottom-52 opacity-25">
+      <div className="absolute left-1/2 top-[1700px] sm:top-[1850px] md:top-[2200px] lg:top-[1320px] transform -translate-x-1/2 -bottom-52 opacity-25">
         <Image src={arrowflipped} alt="arrow" width={250} />
       </div>
       {/* ---------------------------------- Part 4 -------------------------------------------------------- */}
 
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between my-20 mt-52 sm:mt-56 md:mt-60 lg:mt-10  min-h-[600px] relative">
+      <div className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between my-20 mt-52 sm:mt-56 md:mt-60 lg:mt-10  min-h-[600px] relative">
         <div className="w-[45%] sm:w-[50%] md:w-[60%] lg:w-1/2  flex items-center justify-center h-full mb-8 lg:mb-0 order-1 lg:order-2">
           <StyledImage
             src={meeting}
