@@ -37,7 +37,7 @@ const services = [
     id: "service-4",
     name: "Web Marketing",
     description:
-      "Boost your online presence with our expert web marketing services. We specialize in creating tailored strategies that drive traffic, increase engagement, and convert visitors into loyal customers. Our team utilizes the latest tools and techniques in SEO, social media marketing, content marketing, and PPC advertising to ensure your business stands out in the digital landscape.",
+      "Boost your online presence with our expert web marketing services. We specialize in creating tailored strategies that drive traffiic, increase engagement, and convert visitors into loyal customers. Our team utilizes the latest tools and techniques in SEO, social media marketing, content marketing, and PPC advertising to ensure your business stands out in the digital landscape.",
   },
 ];
 
@@ -129,7 +129,7 @@ const ServiceItem = ({ service, index, selected, toggle }: any) => {
       {isOpen && (
         <motion.dd className="pb-6 sm:pb-10 pr-2 sm:pr-6" id={service.id}>
           <p
-            className={`text-gray-300 text-sm sm:text-base md:text-lg lg:text-2xl ${TestFont.className}`}
+            className={`text-gray-300 text-sm sm:text-base md:text-lg ${TestFont.className}`}
           >
             {service.description}
           </p>
@@ -147,10 +147,10 @@ const Services = () => {
   };
 
   return (
-    <div className="container mt-8 sm:mt-12 md:mt-16 lg:mt-20 my-4 sm:my-8 md:my-12 px-2 sm:px-4 md:px-6 lg:px-8">
+    <div className="container w-screen mt-16 lg:mt-20 my-4 sm:my-8 md:my-12 px-2 sm:px-4 md:px-6 lg:px-8">
       <div className="flex flex-col items-center">
         <h4
-          className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-4 sm:mt-8 md:mt-12 mb-6 sm:mb-10 md:mb-16 text-center text-white uppercase ${Engebrechtre.className}`}
+          className={`text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-8 md:mt-12 mb-2 sm:mb-10 md:mb-16 text-center text-white uppercase ${Engebrechtre.className}`}
         >
           Our Services
         </h4>

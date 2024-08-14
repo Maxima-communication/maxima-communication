@@ -21,7 +21,7 @@ const TestFont = localFont({
 
 const Process = () => {
   return (
-    <div className="container max-w-6xl mt-36 relative">
+    <div className="container w-screen max-w-6xl mt-48 sm:mt-36 relative">
       {/* ---------------------------------- Part 1 -------------------------------------------------------- */}
 
       <div className="flex flex-col items-center relative px-4 sm:px-6 md:px-8">
@@ -30,13 +30,13 @@ const Process = () => {
         >
           Our Process
         </h4>
-        <div className="absolute bg-dot-white opacity-40 w-40 h-20 sm:w-60 sm:h-30 md:w-80 md:h-40 translate-x-[100px] sm:translate-x-[150px] md:translate-x-[199px] translate-y-2 sm:translate-y-3" />
+        <div className="absolute bg-dot-white opacity-40 w-40 h-20 sm:w-60 sm:h-30 md:w-72 md:h-32 lg:w-80 lg:h-36 translate-x-[98px] sm:translate-x-[150px] md:translate-x-[170px] lg:translate-x-[199px] translate-y-2 sm:translate-y-3" />
       </div>
 
       {/* ---------------------------------- Part 2 -------------------------------------------------------- */}
 
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between my-20 mt-28 sm:mt-32 md:mt-48 lg:mt-10 min-h-[600px] relative">
-        <div className="w-[45%] sm:w-[50%] md:w-[60%] lg:w-1/2 flex items-center justify-center h-full mb-8 mt-10 lg:mt-10 lg:mb-0">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between my-20 mt-20 sm:mt-32 md:mt-48 lg:mt-10 min-h-[600px] relative">
+        <div className="w-[75%] sm:w-[50%] md:w-[50%] lg:w-[40%] flex items-center justify-center h-full mb-8 mt-10 lg:mt-10 lg:mb-0">
           <StyledImage
             src={whiteboard}
             alt="Discover"
@@ -46,12 +46,12 @@ const Process = () => {
         </div>
         <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center gap-8 px-4 lg:px-16">
           <div
-            className={`text-5xl font-bold text-white text-center lg:text-left ${Engebrechtre.className}`}
+            className={`text-3xl sm:text-4xl font-bold text-white text-center lg:text-left ${Engebrechtre.className}`}
           >
             <AnimatedText text="Discover" />
           </div>
           <div
-            className={`max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl text-center font-medium text-gray-200 text-sm sm:text-base md:text-lg ${TestFont.className}`}
+            className={`max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl mt-2 sm:mt-0 text-center font-medium text-gray-200 text-sm sm:text-base lg:text-base ${TestFont.className}`}
           >
             <p>
               Our process begins with a thorough discovery phase where we take
@@ -65,21 +65,21 @@ const Process = () => {
           </div>
         </div>
       </div>
-      <div className="absolute left-1/2 top-[800px] sm:top-[850px] md:top-[1050px] lg:top-[600px] transform -translate-x-1/2 -bottom-44 opacity-25">
+      <div className="absolute left-1/2 sm:left-[675px] lg:left-1/2 w-2/5 sm:w-1/3 lg:w-3/12 top-[725px] sm:top-[840px] lg:top-[600px] transform -translate-x-1/2 md:-translate-x-96 lg:-translate-x-1/2 -bottom-44 opacity-25">
         <Image src={arrow} alt="arrow" width="250" />
       </div>
       {/* ---------------------------------- Part 3 -------------------------------------------------------- */}
 
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between my-20 mt-52 sm:mt-56 md:mt-60 lg:mt-10  min-h-[600px] relative">
+      <div className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between my-20 mt-52 sm:mt-56 md:mt-60 lg:mt-10  min-h-[600px] relative">
         <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center gap-8 px-4 lg:px-16 order-2 lg:order-1 mb-8 lg:mb-0">
           <div
-            className={`text-5xl font-bold text-white text-center lg:text-left ${Engebrechtre.className}`}
-          >
+            className={`text-3xl sm:text-4xl font-bold text-white text-center lg:text-left ${Engebrechtre.className}`}
+            >
             <AnimatedText text="Build" />
           </div>
           <div
-            className={`max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl text-center lg:text-center font-medium text-gray-200 text-sm sm:text-base md:text-lg ${TestFont.className}`}
-          >
+            className={`max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl mt-2 sm:mt-0 text-center font-medium text-gray-200 text-sm sm:text-base lg:text-base ${TestFont.className}`}
+            >
             <p>
               During the build phase, our skilled developers and designers work
               collaboratively to create a high-quality product. We utilize
@@ -91,7 +91,7 @@ const Process = () => {
             </p>
           </div>
         </div>
-        <div className="w-[45%] sm:w-[50%] md:w-[60%] lg:w-1/2 flex items-center justify-center h-full mb-8 lg:mb-0 order-1 lg:order-2">
+        <div className="w-[75%] sm:w-[50%] md:w-[50%] lg:w-[40%] flex items-center justify-center h-full mb-8 mt-10 lg:mt-10 lg:mb-0">
           <StyledImage
             src={code}
             alt="Build"
@@ -100,14 +100,14 @@ const Process = () => {
           />
         </div>
       </div>
-      <div className="absolute left-1/2 top-[1700px] sm:top-[1850px] md:top-[2200px] lg:top-[1320px] transform -translate-x-1/2 -bottom-52 opacity-25">
+      <div className="absolute left-1/2 w-2/5 sm:w-full lg:w-3/12 top-[1575px] md:top-[1760px] lg:top-[1320px] transform -translate-x-1/2 md:-translate-x-32 lg:-translate-x-1/2 -bottom-52 opacity-25">
         <Image src={arrowflipped} alt="arrow" width={250} />
       </div>
       {/* ---------------------------------- Part 4 -------------------------------------------------------- */}
 
-      <div className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between my-20 mt-52 sm:mt-56 md:mt-60 lg:mt-10  min-h-[600px] relative">
-        <div className="w-[45%] sm:w-[50%] md:w-[60%] lg:w-1/2  flex items-center justify-center h-full mb-8 lg:mb-0 order-1 lg:order-2">
-          <StyledImage
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between my-20 mt-52 sm:mt-56 md:mt-60 lg:mt-10  min-h-[600px] relative">
+      <div className="w-[75%] sm:w-[50%] md:w-[50%] lg:w-[40%] flex items-center justify-center h-full mb-8 mt-10 lg:mt-10 lg:mb-0">
+      <StyledImage
             src={meeting}
             alt="Deliver"
             shape={0}
@@ -117,13 +117,13 @@ const Process = () => {
 
         <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center gap-8 px-4 lg:px-16 order-2 lg:order-1 mb-8 lg:mb-0">
           <div
-            className={`text-5xl font-bold text-white ${Engebrechtre.className}`}
-          >
+            className={`text-3xl sm:text-4xl font-bold text-white text-center lg:text-left ${Engebrechtre.className}`}
+            >
             <AnimatedText text="Deliver" />
           </div>
           <div
-            className={`max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl text-center lg:text-center font-medium text-gray-200 text-sm sm:text-base md:text-lg ${TestFont.className}`}
-          >
+            className={`max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl mt-2 sm:mt-0 text-center font-medium text-gray-200 text-sm sm:text-base lg:text-base ${TestFont.className}`}
+            >
             <p>
               In the deliver phase, we thoroughly test the product to ensure it
               performs flawlessly across all devices and platforms. Once

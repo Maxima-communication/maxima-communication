@@ -1,3 +1,6 @@
+'use client';
+
+import { useLenis } from 'lenis/react';
 import localFont from "next/font/local";
 import Ticker from "@/components/ticker";
 import Services from "@/components/Services";
@@ -12,20 +15,23 @@ const Relevance = localFont({
 });
 
 export default function Home() {
+  useLenis(({ scroll }) => {
+    // You can add any scroll-based animations or effects here
+    console.log('Current scroll position:', scroll);
+  });
+
   return (
-    <main>
-      <Hero />
+    <main className=''>
+    <Hero />
       <AnimatedLogoCloud />
       <div className="h-full relative w-screen flex flex-col items-center justify-center">
         <div className="relative z-20">
           <Services />
-          <div className="w-full max-w-[700px] sm:max-w-[850px] md:max-w-[900px] lg:max-w-none lg:w-screen text-gray-50 text-4xl font-semibold h-16 flex items-center pb-24 pt-36">
+          <div className="w-full lg:w-screen max-w-[700px] sm:max-w-[850px] md:max-w-[900px] lg:max-w-none text-gray-50 font-semibold h-16 flex items-center pb-36 md:pb-40 lg:pb-24 pt-24 lg:pt-36">
             <Ticker />
           </div>
           <Aboutus />
           <Process />
-
-          {/* ------------------------------------ Contact Us ---------------------------------------------- */}
           <ContactUs />
         </div>
       </div>
