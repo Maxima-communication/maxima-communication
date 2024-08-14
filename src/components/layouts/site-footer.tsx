@@ -26,11 +26,11 @@ export default function SiteFooter() {
       </Link>
     </div>
     <div className="flex w-full flex-col items-center justify-between gap-5 pt-8 sm:flex-row py-14">
-      <p className={`text-sm text-gray-300 ${TestFont.className}`}>
-        Copyright {" "} © {" "} {new Date().getFullYear()}{" "} — {" "}
+      <p className={`text-sm lg:text-base text-gray-300 ${TestFont.className}`}>
+        © {"  "} {new Date().getFullYear()}{" "} {/*  — {" "}
         <a href="/" className=" text-violet-400 opacity-100 hover:opacity-80 ">
           Maxima Communication
-        </a>{" "}
+        </a>{" "} */}
       </p>
       <div className="flex gap-4">
         <Link href="https://linkedin.com/P8GXYyH3ZU" className="opacity-75 hover:opacity-100">

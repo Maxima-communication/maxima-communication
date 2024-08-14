@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import localFont from "next/font/local";
 import maxima from "../../../public/m.svg";
+import maximauno from "../../../public/m-footer.svg";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -87,8 +88,13 @@ export default function SiteHeader() {
           className="flex justify-center items-center opacity-75"
         >
           <Image
-            className="h-28 w-56"
+            className="h-28 w-56 hidden md:inline-flex"
             src={maxima}
+            alt="Maxima communications"
+          />
+          <Image
+            className="w-32 py-7 md:py-0 inline-flex md:hidden"
+            src={maximauno}
             alt="Maxima communications"
           />
         </Link>

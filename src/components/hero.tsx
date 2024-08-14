@@ -1,5 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import localFont from "next/font/local";
+import Splitting from "splitting";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ParaFont = localFont({
   src: "../../public/assets/fonts/area/AreaNormalTrial-Medium-BF65ea75c66b01c.otf",
@@ -17,6 +22,7 @@ const DescFont = localFont({
   src: "../../public/assets/fonts/recoleta/Recoleta-RegularDEMO.otf",
 });
 
+
 const EyeShape = () => (
   <svg
     width="201"
@@ -24,7 +30,7 @@ const EyeShape = () => (
     viewBox="0 0 201 108"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="absolute top-12 -right-[6px] w-20 h-auto opacity-60"
+    className="absolute top-9 -right-[6px] w-16 sm:top-12 sm:-right-[6px] sm:w-20 h-auto opacity-60"
     transform="rotate(5)"
   >
     <path
@@ -52,32 +58,6 @@ const EyeShape = () => (
   </svg>
 );
 
-// const ArrowShape = () => (
-//   <svg
-//     width="201"
-//     height="200"
-//     viewBox="0 0 201 200"
-//     fill="none"
-//     xmlns="http://www.w3.org/2000/svg"
-//     className="absolute top-[76px] -left-4 w-72 h-auto opacity-70"
-//     style={{ transform: 'rotate(-20deg)' }}
-//   >
-//     <path
-//       d="M200 0V60V200H140V130C140 168.66 108.66 200 70 200C31.34 200 0 168.66 0 130C0 91.34 31.34 60 70 60C108.66 60 140 91.34 140 130V60H70H0V0H140H200Z"
-//       stroke="url(#arrow-gradient)"
-//       strokeWidth="2"
-//       strokeLinejoin="round"
-//       fill="none"
-//     />
-//     <defs>
-//       <linearGradient id="arrow-gradient" x1="0" y1="0" x2="201" y2="200" gradientUnits="userSpaceOnUse" className='bg-purple-950'>
-//         <stop stopColor="#8B5CF6"/>
-//         <stop offset="1" stopColor="#8B5CF6"/>
-//       </linearGradient>
-//     </defs>
-//   </svg>
-// );
-
 const CircleShape = () => (
   <svg
     width="201"
@@ -85,7 +65,7 @@ const CircleShape = () => (
     viewBox="0 0 201 200"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="absolute top-[23px] -right-[2.75px] w-[88px] h-auto opacity-60"
+    className="absolute top-[19px] -right-[0.75px] w-[63px] sm:top-[23px] sm:-right-[2.75px] sm:w-[88px] h-auto opacity-60"
   >
     <mask
       id="mask0_1_853"
@@ -123,14 +103,33 @@ const CircleShape = () => (
 );
 
 export default function Hero() {
+
+  useEffect(() => {
+    Splitting();
+    gsap.to(".hero-title", {
+      rotationX: 180,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: ".hero-title",
+        start: "center center",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  }, []);
+  
+  
+
   return (
-    <div className="h-[55vh] w-screen justify-center items-center mt-16 sm:mt-0 md:mt-0 lg:mt-0     flex px-4 container max-w-6xl  relative">
+    <div className="hero-title h-[55vh] w-screen justify-center items-center mt-10 sm:mt-0 md:mt-0 lg:mt-0 flex px-4 container max-w-6xl relative">
       {/* <EyeShape /> */}
       {/* <ArrowShape /> */}
       {/* <CircleShape /> */}
       <div className="w-4/5 -mt-14 space-y-5 text-center relative z-10">
         <h1
-          className={`leading-tighter text-9xl -ml-6 sm:ml-0 md:ml-0 lg:ml-0  lg:text-9xl text-white opacity-95 ${TestFont.className}`}
+          className={`leading-tighter text-center text-8xl sm:text-9xl -ml-2 sm:ml-0 md:ml-0 lg:ml-0 text-white opacity-95 ${TestFont.className}`}  data-splitting
         >
           Voice y
           <span className="relative">
@@ -146,8 +145,8 @@ export default function Hero() {
             n
           </span>
         </h1>
-        <h6 className={`pt-5 text-xl mx-auto text-neutral-100 tracking-wide`}>
-          <span className={`${DescFont.className}`}>
+        <h6 className={`pt-5 text-lg sm:text-xl mx-auto text-neutral-100 tracking-wide`}>
+          {/* <span className={`${DescFont.className}`}>
             {" "}
             Transform Your Vision Into Reality{" "}
           </span>{" "}
@@ -155,12 +154,59 @@ export default function Hero() {
           <span className={`${DescFont.className}`}>
             {" "}
             Let's Bring Your Ideas to Life with a{" "}
+          </span> */}
+          <span className={`${DescFont.className}`}>
+            {" "}
+            Bring Your Ideas to Life with a{" "}
           </span>
           {` `}
           <span className={`${DescFont.className} font-bold`}>FREE</span>
           {` `}
           <span className={`${DescFont.className}`}>Consultation</span>
         </h6>
+        <a
+          href="#_"
+          className="inline-flex lg:hidden relative items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-black hover:text-white transition-all duration-150 ease-in-out rounded-3xl hover:pl-10 hover:pr-6 bg-gray-50 hover:bg-opacity-0 group border hover:border-white hover:backdrop-blur-3xl"
+        >
+          <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out group-hover:h-full"></span>
+          <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+            <svg
+              className="w-4 h-4 md:w-5 md:h-5 text-black hover:text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </span>
+          <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+            <svg
+              className="w-4 h-4 md:w-5 md:h-5 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </span>
+          <span
+            className={`relative w-full text-sm md:text-base text-left transition-colors duration-200 ease-in-out group-hover:text-white`}
+          >
+            Get in touch
+          </span>
+        </a>
       </div>
     </div>
   );
