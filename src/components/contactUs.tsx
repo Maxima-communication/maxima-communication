@@ -35,7 +35,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="container relative flex flex-col w-1/2 sm:w-screen bg-cover bg-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+    <div className="container relative flex flex-col  w-screen bg-cover bg-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
       <div className="absolute top-0 right-0 w-full h-full">
         <MeteorDemo />
       </div>

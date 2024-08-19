@@ -24,10 +24,10 @@ export default function Home() {
     <main className=''>
     <Hero />
       <AnimatedLogoCloud />
-      <div className="h-full relative w-screen flex flex-col items-center justify-center">
+      <div className="h-full relative w-screen  flex md:flex-col md:items-center md:justify-center">
         <div className="relative z-20">
           <Services />
-          <div className="w-full lg:w-screen max-w-[700px] sm:max-w-[850px] md:max-w-[900px] lg:max-w-none text-gray-50 font-semibold h-16 flex items-center pb-36 md:pb-40 lg:pb-24 pt-24 lg:pt-36">
+          <div className="w-screen  text-gray-50 font-semibold h-16 flex items-center pb-36 md:pb-40 lg:pb-24 pt-24 lg:pt-36">
             <Ticker />
           </div>
           <Aboutus />

@@ -147,7 +147,7 @@ const Services = () => {
   };
 
   return (
-    <div className="container w-screen mt-16 lg:mt-20 my-4 sm:my-8 md:my-12 px-2 sm:px-4 md:px-6 lg:px-8">
+    <div className="lg:container w-screen mt-16 lg:mt-20 my-4 sm:my-8 md:my-12 px-2 sm:px-4 md:px-6 lg:px-8">
       <div className="flex flex-col items-center">
         <h4
           className={`text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-8 md:mt-12 mb-2 sm:mb-10 md:mb-16 text-center text-white uppercase ${Engebrechtre.className}`}

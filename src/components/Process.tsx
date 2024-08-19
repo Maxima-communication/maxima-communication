@@ -100,7 +100,7 @@ const Process = () => {
           />
         </div>
       </div>
-      <div className="absolute left-1/2 w-2/5 sm:w-full lg:w-3/12 top-[1575px] md:top-[1760px] lg:top-[1320px] transform -translate-x-1/2 md:-translate-x-32 lg:-translate-x-1/2 -bottom-52 opacity-25">
+      <div className="absolute left-1/2 w-2/5 sm:w-full  md:w-3/12 top-[1575px] md:top-[1760px] lg:top-[1320px] transform -translate-x-1/2 md:-translate-x-32 lg:-translate-x-1/2 -bottom-52 opacity-25">
         <Image src={arrowflipped} alt="arrow" width={250} />
       </div>
       {/* ---------------------------------- Part 4 -------------------------------------------------------- */}
@@ -109,7 +109,7 @@ const Process = () => {
       <div className="w-[75%] sm:w-[50%] md:w-[50%] lg:w-[40%] flex items-center justify-center h-full mb-8 mt-10 lg:mt-10 lg:mb-0">
       <StyledImage
             src={meeting}
-            alt="Deliver"
+            alt="Deliver" 
             shape={0}
             className="max-h-full max-w-full"
           />

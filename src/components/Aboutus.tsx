@@ -1,7 +1,7 @@
 'use client';
 import localFont from "next/font/local";
 import Image from "next/image";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import first from "../images/first.png";
 import second from "../images/second.png";
 import button from "../images/butt.svg";
@@ -17,19 +17,20 @@ const Aboutus = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="relative container my-20 sm:my-32 sm:mb-52 md:mb-60 lg:my-32 max-w-6xl flex items-center justify-center lg:min-h-screen mx-auto">
+    <div className="relative container my-20 sm:my-32 sm:mb-52 md:mb-60 lg:my-32 max-w-6xl flex items-start justify-start  md:items-center md:justify-center lg:min-h-screen mx-auto">
       {/* Mesh Background Image */}
       <Image
         src={mesh}
         alt="Mesh Background"
-        className="absolute  w-[400px] h-[375px] sm:w-[600px] sm:h-[550px] lg:w-[800px] lg:h-[700px] inset-9 lg:inset-1 object-fill opacity-20 blur-[1.5px] z-[-1] translate-x-28 -translate-y-32 sm:-translate-y-44 lg:-translate-y-8"
+        className="absolute w-[400px] h-[375px] sm:w-[600px] sm:h-[550px] lg:w-[800px] lg:h-[700px] inset-9 lg:inset-1 object-fill opacity-20 blur-[1.5px] z-[-1] -translate-x-11 -translate-y-32 sm:-translate-y-44 lg:-translate-y-8 lg:translate-x-28 md:translate-x-16"
       />
       {/* Content */}
-      <div className="relative h-48 sm:h-72 lg:h-96 flex justify-center items-center z-10">
+      <div className="relative h-48 sm:h-72 lg:h-96 flex justify-start md:justify-center items-center z-10">
         <p 
           onMouseEnter={() => setIsHovered(true)} 
           onMouseLeave={() => setIsHovered(false)}
-          className={`text-center tracking-wide py-10 px-20 lg:p-20 w-4/5 text-3xl sm:text-5xl lg:text-6xl text-gray-200 ${Coolvetica.className}`}
+          className={`text-center tracking-wide py-10 w-full md:w-4/5   px-0 sm:pl-3 lg:p-20  sm:w-4/5 text-3xl sm:text-5xl lg:text-6xl text-gray-200 ${Coolvetica.className}`}
+         
         >
           A CREATIVE{" "}
           <span className="inline-block">
@@ -72,7 +73,6 @@ const Aboutus = () => {
         </p>
         <GradientCursor isHovered={isHovered} />
       </div>
-      
     </div>
   );
 };
