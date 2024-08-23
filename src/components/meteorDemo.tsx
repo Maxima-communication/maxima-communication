@@ -8,7 +8,7 @@ export function MeteorDemo() {
         className="  h-full w-full   overflow-hidden   bg-background "
         color={["#9d4edd", "#3c096c", "#e0aaff"]}
       >
-        <Meteors number={30} />
+        <Meteors number={20} />
       </ShineBorder>
     </div>
   );

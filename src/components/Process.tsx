@@ -65,7 +65,7 @@ const Process = () => {
           </div>
         </div>
       </div>
-      <div className="absolute left-1/2 sm:left-[675px] lg:left-1/2 w-2/5 sm:w-1/3 lg:w-3/12 top-[725px] sm:top-[840px] lg:top-[600px] transform -translate-x-1/2 md:-translate-x-96 lg:-translate-x-1/2 -bottom-44 opacity-25">
+      <div className="absolute left-1/2 sm:left-[675px] lg:left-1/2 w-2/5 sm:w-1/3 md:w-3/12 top-[710px] sm:top-[860px] lg:top-[600px] transform -translate-x-1/2 md:-translate-x-96 lg:-translate-x-1/2 -bottom-44 opacity-25">
         <Image src={arrow} alt="arrow" width="250" />
       </div>
       {/* ---------------------------------- Part 3 -------------------------------------------------------- */}
@@ -100,7 +100,7 @@ const Process = () => {
           />
         </div>
       </div>
-      <div className="absolute left-1/2 w-2/5 sm:w-full  md:w-3/12 top-[1575px] md:top-[1760px] lg:top-[1320px] transform -translate-x-1/2 md:-translate-x-32 lg:-translate-x-1/2 -bottom-52 opacity-25">
+      <div className="absolute left-1/2 w-2/5 sm:w-full  md:w-3/12 top-[1575px] md:top-[1800px] lg:top-[1320px] transform -translate-x-1/2 md:-translate-x-32 lg:-translate-x-1/2 -bottom-52 opacity-25">
         <Image src={arrowflipped} alt="arrow" width={250} />
       </div>
       {/* ---------------------------------- Part 4 -------------------------------------------------------- */}

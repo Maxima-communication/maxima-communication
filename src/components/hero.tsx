@@ -19,7 +19,11 @@ const FlippedFont = localFont({
 });
 
 const DescFont = localFont({
-  src: "../../public/assets/fonts/recoleta/Recoleta-RegularDEMO.otf",
+  src: "../../public/assets/fonts/lt_superior/LTSuperior-Light.otf",
+});
+
+const BoldFont = localFont({
+  src: "../../public/assets/fonts/lt_superior/LTSuperior-SemiBold.otf",
 });
 
 
@@ -109,7 +113,7 @@ export default function Hero() {
     gsap.to(".hero-title", {
       rotationX: 180,
       opacity: 0,
-      duration: 1.5,
+      duration: 2.5,
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: ".hero-title",
@@ -123,7 +127,7 @@ export default function Hero() {
   
 
   return (
-    <div className="hero-title h-[55vh] w-screen justify-center items-center mt-10 sm:mt-0 md:mt-0 lg:mt-0 flex px-4 container max-w-6xl relative">
+    <div className="lg:hero-title h-[55vh] w-screen justify-center items-center mt-10 sm:mt-0 md:mt-0 lg:mt-0 flex px-4 container max-w-6xl relative">
       {/* <EyeShape /> */}
       {/* <ArrowShape /> */}
       {/* <CircleShape /> */}
@@ -160,7 +164,7 @@ export default function Hero() {
             Bring Your Ideas to Life with a{" "}
           </span>
           {` `}
-          <span className={`${DescFont.className} font-bold`}>FREE</span>
+          <span className={`${BoldFont.className} tracking-wider`}>FREE</span>
           {` `}
           <span className={`${DescFont.className}`}>Consultation</span>
         </h6>
