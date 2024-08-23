@@ -16,10 +16,11 @@ const Relevance = localFont({
 });
 
 export default function Home() {
-  useLenis(({ scroll }) => {
-    // You can add any scroll-based animations or effects here
-    console.log("Current scroll position:", scroll);
-  });
+  if (typeof window !== 'undefined') {
+    useLenis(({ scroll }) => {
+      console.log("Current scroll position:", scroll);
+    });
+  }
 
   return (
     <main className="">
