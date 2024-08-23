@@ -7,7 +7,7 @@ import maxima from "../../../public/m.svg";
 import maximauno from "../../../public/m-footer.svg";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { Link as ScrollLink } from "react-scroll";
 // Testing font
 const TestFont = localFont({
   src: "../../../public/assets/fonts/area/AreaNormalTrial-Semibold-BF65ea75c6b547e.otf",
@@ -19,9 +19,9 @@ const LogoFont = localFont({
 });
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "Process", href: "/process" },
+  { name: "Home", href: "hero" },
+  { name: "Services", href: "services" },
+  { name: "Process", href: "process" },
 ] as const;
 
 type NavigationItem = (typeof navigation)[number]["name"];
@@ -44,7 +44,7 @@ const HamburgerButton = ({
   >
     <span className="sr-only">Toggle menu</span>
     <svg
-      className={`h-8 w-8 sm:h-10 sm:w-10 ${isOpen ? 'hidden' : 'block'}`}
+      className={`h-8 w-8 sm:h-10 sm:w-10 ${isOpen ? "hidden" : "block"}`}
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       viewBox="0 0 24 24"
@@ -53,7 +53,7 @@ const HamburgerButton = ({
       <path d="M19 8H5V10H19V8ZM19 14H5V16H19V14Z"></path>
     </svg>
     <svg
-      className={`h-8 w-8 sm:h-10 sm:w-10 ${isOpen ? 'block' : 'hidden'}`}
+      className={`h-8 w-8 sm:h-10 sm:w-10 ${isOpen ? "block" : "hidden"}`}
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       viewBox="0 0 24 24"
@@ -86,13 +86,16 @@ export default function SiteHeader() {
     <header className="transition">
       <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-8 sm:px-6 sm:py-16 lg:py-8 lg:max-w-7xl lg:px-8">
         <div className="flex">
-          <Link href="/" className="focus-visible:outline-purple-500 rounded-md focus-visible:outline focus-visible:outline-2">
+          <Link
+            href="/"
+            className="focus-visible:outline-purple-500 rounded-md focus-visible:outline focus-visible:outline-2"
+          >
             <span className="sr-only">Maxima</span>
             <Image
-            className="h-28 w-56 hidden lg:inline-flex opacity-75"
-            src={maxima}
-            alt="Maxima communications"
-          />
+              className="h-28 w-56 hidden lg:inline-flex opacity-75"
+              src={maxima}
+              alt="Maxima communications"
+            />
             <Image
               className="h-14 w-auto sm:h-16 lg:hidden" // Increased logo size
               src={maximauno}
@@ -101,20 +104,31 @@ export default function SiteHeader() {
           </Link>
         </div>
 
-          {/* Desktop navigation */}
-          <nav className="hidden lg:flex gap-16">
-            {navigation.map((item) => {
-              const isSelected = item.name === selectedLink;
-              return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`relative text-sm tracking-wide leading-6 uppercase no-underline ${TestFont.className} ${isSelected ? 'text-purple-800 dark:text-white' : 'text-purple-600 dark:text-purple-200'}`}
-                  onClick={() => setSelectedLink(item.name)}
-                  ref={isSelected ? selectedLinkRef : null} 
-                >
-                  {item.name}
-                  {isSelected && (
+        {/* Desktop navigation */}
+        <nav className="hidden lg:flex gap-16">
+          {navigation.map((item) => {
+            const isSelected = item.name === selectedLink;
+            return (
+              <ScrollLink
+                key={item.name}
+                to={item.href}
+                spy={true}
+                smooth={true}
+                duration={1000}
+                className={`relative cursor-pointer text-sm tracking-wide leading-6 uppercase no-underline ${
+                  TestFont.className
+                } ${
+                  isSelected
+                    ? "text-purple-800 dark:text-white"
+                    : "text-purple-600 dark:text-purple-200"
+                }`}
+                onClick={() => {
+                  setSelectedLink(item.name);
+                  setIsMenuOpen(false);
+                }}
+              >
+                {item.name}
+                {isSelected && (
                   <motion.div
                     className="absolute -bottom-[1px] left-0 right-0 h-[1px] flex justify-center"
                     initial={{ width: 0, opacity: 0 }}
@@ -149,13 +163,13 @@ export default function SiteHeader() {
                     </svg>
                   </motion.div>
                 )}
-                </Link>
-              );
-            })}
-          </nav>
+              </ScrollLink>
+            );
+          })}
+        </nav>
 
-          {/* Get in touch button (desktop only) */}
-          <a
+        {/* Get in touch button (desktop only) */}
+        <a
           href="#_"
           className="hidden lg:inline-flex relative items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-black hover:text-white transition-all duration-150 ease-in-out rounded-3xl hover:pl-10 hover:pr-6 bg-gray-50 hover:bg-opacity-0 group border hover:border-white hover:backdrop-blur-3xl"
         >
@@ -199,8 +213,8 @@ export default function SiteHeader() {
           </span>
         </a>
 
-          {/* Hamburger menu (mobile/tablet only) */}
-          <HamburgerButton onClick={toggleMenu} isOpen={isMenuOpen} />
+        {/* Hamburger menu (mobile/tablet only) */}
+        <HamburgerButton onClick={toggleMenu} isOpen={isMenuOpen} />
       </div>
 
       {/* Mobile menu */}
@@ -217,9 +231,13 @@ export default function SiteHeader() {
             <div className="grid grid-cols-1 gap-16 pb-24 pt-6 lg:grid-cols-2 lg:pt-12">
               <nav className="divide-purple-200 dark:divide-opacity-20 dark:divide-purple-400 flex flex-col gap-1 divide-y">
                 {navigation.map((item) => (
-                  <Link
+                  <ScrollLink
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
+                    spy={true}
+                    smooth={true}
+                    offset={-450}
+                    duration={1000}
                     className="text-purple-800 dark:text-white group inline-flex py-6 text-3xl font-medium tracking-tight transition focus-visible:outline-none sm:py-8 sm:text-4xl"
                     onClick={() => {
                       setSelectedLink(item.name);
@@ -228,8 +246,12 @@ export default function SiteHeader() {
                   >
                     <div className="group-focus-visible:outline-purple-500 flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
                       <div className="flex items-center gap-6">
-                        <span className="text-xs text-purple-500 dark:text-purple-300">{`0${navigation.indexOf(item) + 1}`}</span>
-                        <span className="group-hover:underline">{item.name}</span>
+                        <span className="text-xs text-purple-500 dark:text-purple-300">{`0${
+                          navigation.indexOf(item) + 1
+                        }`}</span>
+                        <span className="group-hover:underline">
+                          {item.name}
+                        </span>
                       </div>
                       <svg
                         className="text-purple-500 dark:text-purple-300 h-6 w-6 sm:h-8 sm:w-8"
@@ -241,7 +263,7 @@ export default function SiteHeader() {
                         <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" />
                       </svg>
                     </div>
-                  </Link>
+                  </ScrollLink>
                 ))}
               </nav>
             </div>

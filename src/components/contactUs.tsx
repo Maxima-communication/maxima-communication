@@ -86,7 +86,7 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <p
-                    className={`font-medium text-purple-200 text-opacity-75 text-sm sm:text-base md:text-lg ml-[53px] sm:ml-[70px] lg:ml-20 mt-2 ${TestFont3.className}`}
+                    className={`font-medium text-purple-200 text-opacity-75 text-xs sm:text-base md:text-lg ml-[53px] sm:ml-[70px] lg:ml-20 mt-2 ${TestFont3.className}`}
                     >
                     web.maxima.communication@gmail.com
                   </p>
@@ -112,7 +112,7 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <p
-                    className={`font-medium text-purple-200 text-opacity-75 text-sm sm:text-base md:text-lg ml-[53px] sm:ml-[70px] lg:ml-20 mt-2 ${TestFont3.className}`}
+                    className={`font-medium text-purple-200 text-opacity-75 text-xs sm:text-base md:text-lg ml-[53px] sm:ml-[70px] lg:ml-20 mt-2 ${TestFont3.className}`}
                     >
                     212 Technopark, 80000 Agadir, Morocco
                   </p>
@@ -130,7 +130,7 @@ const ContactUs = () => {
                       Call us
                     </p>
                     <p
-                      className={`text-sm sm:text-base md:text-lg text-stone-400 ${TestFont.className}`}
+                      className={`text-xs sm:text-base md:text-lg text-stone-400 ${TestFont.className}`}
                     >
                       Monday - Friday || 8:00 - 18:00.
                     </p>
