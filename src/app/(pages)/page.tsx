@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import localFont from "next/font/local";
 import { Element } from "react-scroll";
@@ -19,7 +19,11 @@ const Relevance = localFont({
 });
 
 export default function Home() {
-  const lenis = useLenis(({ scroll }: { scroll: number }) => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  
+  // Use the hook directly in the component body
+  useLenis(({ scroll }) => {
+    setScrollPosition(scroll);
     console.log("Current scroll position:", scroll);
   });
 
