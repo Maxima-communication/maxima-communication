@@ -20,19 +20,6 @@ const Relevance = localFont({
 
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
-  
-  // Use the hook directly in the component body
-  useLenis(({ scroll }) => {
-    setScrollPosition(scroll);
-    console.log("Current scroll position:", scroll);
-  });
-
-  useEffect(() => {
-    // Any additional setup or cleanup can go here
-    return () => {
-      // Cleanup code if necessary
-    };
-  }, []);
 
   return (
     <main className="">
