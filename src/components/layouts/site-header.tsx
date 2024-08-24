@@ -19,7 +19,7 @@ const LogoFont = localFont({
 });
 
 const navigation = [
-  { name: "Home", href: "hero" },
+  { name: "Home", href: "header" },
   { name: "Services", href: "services" },
   { name: "Process", href: "process" },
 ] as const;
@@ -86,7 +86,11 @@ export default function SiteHeader() {
     <header className="transition">
       <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-8 sm:px-6 sm:py-16 lg:py-8 lg:max-w-7xl lg:px-8">
         <div className="flex">
-          <Link
+          <ScrollLink
+          to="header"
+          spy={true}
+          smooth={true}
+          duration={1000}
             href="/"
             className="focus-visible:outline-purple-500 rounded-md focus-visible:outline focus-visible:outline-2"
           >
@@ -101,7 +105,7 @@ export default function SiteHeader() {
               src={maximauno}
               alt="Maxima communications"
             />
-          </Link>
+          </ScrollLink>
         </div>
 
         {/* Desktop navigation */}
@@ -169,9 +173,12 @@ export default function SiteHeader() {
         </nav>
 
         {/* Get in touch button (desktop only) */}
-        <a
-          href="#_"
-          className="hidden lg:inline-flex relative items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-black hover:text-white transition-all duration-150 ease-in-out rounded-3xl hover:pl-10 hover:pr-6 bg-gray-50 hover:bg-opacity-0 group border hover:border-white hover:backdrop-blur-3xl"
+        <ScrollLink
+        to="contactus"
+        spy={true}
+        smooth={true}
+        duration={1000}
+          className="hidden lg:inline-flex relative items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-black hover:text-white transition-all duration-150 ease-in-out rounded-3xl hover:pl-10 hover:pr-6 bg-gray-50 hover:bg-opacity-0 group border hover:border-white hover:backdrop-blur-3xl cursor-pointer"
         >
           <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out group-hover:h-full"></span>
           <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
@@ -211,7 +218,7 @@ export default function SiteHeader() {
           >
             Get in touch
           </span>
-        </a>
+        </ScrollLink>
 
         {/* Hamburger menu (mobile/tablet only) */}
         <HamburgerButton onClick={toggleMenu} isOpen={isMenuOpen} />
@@ -238,7 +245,7 @@ export default function SiteHeader() {
                     smooth={true}
                     offset={-450}
                     duration={1000}
-                    className="text-purple-800 dark:text-white group inline-flex py-6 text-3xl font-medium tracking-tight transition focus-visible:outline-none sm:py-8 sm:text-4xl"
+                    className="text-purple-800 dark:text-white group inline-flex py-6 text-3xl font-medium tracking-tight transition focus-visible:outline-none sm:py-8 sm:text-4xl cursor-pointer"
                     onClick={() => {
                       setSelectedLink(item.name);
                       setIsMenuOpen(false);

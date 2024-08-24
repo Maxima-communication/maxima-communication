@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import localFont from "next/font/local";
 import Splitting from "splitting";
+import { Link as ScrollLink } from "react-scroll";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -168,8 +169,11 @@ export default function Hero() {
           {` `}
           <span className={`${DescFont.className}`}>Consultation</span>
         </h6>
-        <a
-          href="#_"
+        <ScrollLink
+        to="contactus"
+        spy={true}
+        smooth={true}
+        duration={1000}
           className="inline-flex lg:hidden relative items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-black hover:text-white transition-all duration-150 ease-in-out rounded-3xl hover:pl-10 hover:pr-6 bg-gray-50 hover:bg-opacity-0 group border hover:border-white hover:backdrop-blur-3xl"
         >
           <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out group-hover:h-full"></span>
@@ -210,7 +214,7 @@ export default function Hero() {
           >
             Get in touch
           </span>
-        </a>
+        </ScrollLink>
       </div>
     </div>
   );
