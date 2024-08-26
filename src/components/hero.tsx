@@ -7,10 +7,6 @@ import { Link as ScrollLink } from "react-scroll";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ParaFont = localFont({
-  src: "../../public/assets/fonts/area/AreaNormalTrial-Medium-BF65ea75c66b01c.otf",
-});
-
 const TestFont = localFont({
   src: "../../public/assets/fonts/area/AreaInktrapTrial-Extrabold-BF65ea75c482e6b.otf",
 });
@@ -110,22 +106,23 @@ const CircleShape = () => (
 export default function Hero() {
 
   useEffect(() => {
+    const title = document.querySelector(".hero-title");
+    if (!title) return;
+  
     Splitting();
-    gsap.to(".hero-title", {
+    gsap.to(title, {
       rotationX: 180,
       opacity: 0,
       duration: 2.5,
       ease: "power2.inOut",
       scrollTrigger: {
-        trigger: ".hero-title",
+        trigger: title,
         start: "center center",
         end: "bottom top",
         scrub: true,
       },
     });
-  }, []);
-  
-  
+  }, []); // Ensure dependencies are correct  
 
   return (
     <div className="lg:hero-title h-[55vh] w-screen justify-center items-center mt-10 sm:mt-0 md:mt-0 lg:mt-0 flex px-4 container max-w-6xl relative">
