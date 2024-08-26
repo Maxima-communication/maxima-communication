@@ -105,33 +105,14 @@ const CircleShape = () => (
 
 export default function Hero() {
 
-  useEffect(() => {
-    const title = document.querySelector(".hero-title");
-    if (!title) return;
-  
-    Splitting();
-    gsap.to(title, {
-      rotationX: 180,
-      opacity: 0,
-      duration: 2.5,
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: title,
-        start: "center center",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
-  }, []); // Ensure dependencies are correct  
-
   return (
-    <div className="lg:hero-title h-[55vh] w-screen justify-center items-center mt-10 sm:mt-0 md:mt-0 lg:mt-0 flex px-4 container max-w-6xl relative">
+    <div className="h-[55vh] w-screen justify-center items-center mt-10 sm:mt-0 md:mt-0 lg:mt-0 flex px-4 container max-w-6xl relative">
       {/* <EyeShape /> */}
       {/* <ArrowShape /> */}
       {/* <CircleShape /> */}
       <div className="w-4/5 -mt-14 space-y-5 text-center relative z-10">
         <h1
-          className={`leading-tighter text-center text-8xl sm:text-9xl -ml-2 sm:ml-0 md:ml-0 lg:ml-0 text-white opacity-95 ${TestFont.className}`}  data-splitting
+          className={`leading-tighter text-center text-8xl sm:text-9xl -ml-2 sm:ml-0 md:ml-0 lg:ml-0 text-white opacity-95 ${TestFont.className}`} 
         >
           Voice y
           <span className="relative">

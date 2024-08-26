@@ -89,9 +89,6 @@ importers:
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
-      splitting:
-        specifier: ^1.1.0
-        version: 1.1.0
       tailwind-merge:
         specifier: ^1.14.0
         version: 1.14.0
@@ -2003,9 +2000,6 @@ packages:
   source-map@0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
-
-  splitting@1.1.0:
-    resolution: {integrity: sha512-6Tj+4mvlSti4DUu1yl0PnkHIIoLchFYJHqz2DnwYkvEehXbjrR2epa4ds/xdto6ZdZsC+NP5IOOehi9VGjNlMQ==}
 
   stats-gl@2.2.8:
     resolution: {integrity: sha512-94G5nZvduDmzxBS7K0lYnynYwreZpkknD8g5dZmU6mpwIhy3caCrjAm11Qm1cbyx7mqix7Fp00RkbsonzKWnoQ==}
@@ -4145,8 +4139,6 @@ snapshots:
 
   source-map@0.6.1:
     optional: true
-
-  splitting@1.1.0: {}
 
   stats-gl@2.2.8:
     dependencies:
