@@ -30,31 +30,29 @@ function Page() {
   }, []);
 
   return (
-    <div>
-      {/* <Lenis> */}
-        <Element name="hero">
-          <Hero />
-        </Element>
-        <Element name="services">
-          <Services />
-        </Element>
-        <Element name="process">
-          <Process />
-        </Element>
-        <Element name="aboutus">
+    <main className="">
+      <Element name="hero">
+        <Hero />
+      </Element>
+      <AnimatedLogoCloud />
+      <div className="h-full relative w-screen flex md:flex-col md:items-center md:justify-center">
+        <div className="relative z-20">
+          <Element name="services">
+            <Services />
+          </Element>
+          <div className="w-screen text-gray-50 font-semibold h-16 flex items-center pb-36 md:pb-40 lg:pb-24 pt-24 lg:pt-36">
+            <Ticker />
+          </div>
           <Aboutus />
-        </Element>
-        <Element name="contactus">
+          <Element name="process">
+            <Process />
+          </Element>
+          <Element name="contactus">
           <ContactUs />
-        </Element>
-        <Element name="ticker">
-          <Ticker />
-        </Element>
-        <Element name="animated-logo-cloud">
-          <AnimatedLogoCloud />
-        </Element>
-      {/* </Lenis> */}
-    </div>
+          </Element>
+        </div>
+      </div>
+    </main>
   );
 }
 
