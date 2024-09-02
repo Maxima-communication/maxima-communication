@@ -8,13 +8,22 @@ import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { Element } from "react-scroll";
 
+const ReactLenis = dynamic(() => import('lenis/react').then(mod => mod.ReactLenis), {
+  ssr: false
+});
+
 interface AuthLayoutProps {
   children: React.ReactNode;
 }
 
 export default function PagesLayout({ children }: AuthLayoutProps) {
+  const [isClient, setIsClient] = useState(false);
 
-  return (
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const content = (
     <AuroraBackground>
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
@@ -37,5 +46,15 @@ export default function PagesLayout({ children }: AuthLayoutProps) {
         </div>
       </motion.div>
     </AuroraBackground>
+  );
+
+  if (!isClient) {
+    return content; // Render without ReactLenis on the server
+  }
+
+  return (
+    <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
+      {content}
+    </ReactLenis>
   );
 }
