@@ -37,7 +37,7 @@ const HamburgerButton = ({
 }) => (
   <button
     type="button"
-    className="text-purple-800 hover:bg-purple-100 dark:text-white dark:hover:bg-purple-900 inline-flex h-14 w-14  items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 lg:hidden"
+    className="text-purple-800 dark:text-white inline-flex h-14 w-14  items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2 lg:hidden"
     onClick={onClick}
     aria-controls="website-menu"
     aria-expanded={isOpen}
