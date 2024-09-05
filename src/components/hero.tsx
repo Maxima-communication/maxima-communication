@@ -128,7 +128,7 @@ export default function Hero() {
             n
           </span>
         </h1>
-        <h6 className={`pt-2 text-lg sm:text-xl mx-auto text-neutral-100 tracking-wide`}>
+        <h6 className={`-mt-2 md:pt-2 text-lg sm:text-xl mx-auto text-neutral-100 tracking-wide`}>
           {/* <span className={`${DescFont.className}`}>
             {" "}
             Transform Your Vision Into Reality{" "}
