@@ -106,7 +106,7 @@ const CircleShape = () => (
 export default function Hero() {
 
   return (
-    <div className="h-[55vh] w-screen justify-center items-center mt-10 sm:mt-0 md:mt-0 lg:mt-0 flex px-4 container max-w-6xl relative">
+    <div className="h-[55vh] w-screen justify-center items-center mt-20 sm:mt-0 md:mt-0 lg:mt-0 flex px-4 container max-w-6xl relative">
       {/* <EyeShape /> */}
       {/* <ArrowShape /> */}
       {/* <CircleShape /> */}
