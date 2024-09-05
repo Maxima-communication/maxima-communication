@@ -30,7 +30,7 @@ export default function PagesLayout({ children }: AuthLayoutProps) {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.3,
-          duration: 0.8,
+          duration: 0.4,
           ease: "easeInOut",
         }}
         className="absolute top-0 w-full items-center justify-center"
