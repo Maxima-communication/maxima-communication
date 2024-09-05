@@ -106,7 +106,7 @@ const CircleShape = () => (
 export default function Hero() {
 
   return (
-    <div className="h-[55vh] w-screen justify-center items-center mt-20 sm:mt-0 md:mt-0 lg:mt-0 flex px-4 container max-w-6xl relative">
+    <div className="h-[55vh] w-screen justify-center items-center mt-16 sm:mt-0 md:mt-0 lg:mt-0 flex px-4 container max-w-6xl relative">
       {/* <EyeShape /> */}
       {/* <ArrowShape /> */}
       {/* <CircleShape /> */}
@@ -128,7 +128,7 @@ export default function Hero() {
             n
           </span>
         </h1>
-        <h6 className={`pt-5 text-lg sm:text-xl mx-auto text-neutral-100 tracking-wide`}>
+        <h6 className={`pt-2 text-lg sm:text-xl mx-auto text-neutral-100 tracking-wide`}>
           {/* <span className={`${DescFont.className}`}>
             {" "}
             Transform Your Vision Into Reality{" "}
