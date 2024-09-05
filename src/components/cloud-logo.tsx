@@ -13,7 +13,7 @@ export const AnimatedLogoCloud = () => {
     <div className="container">
       <div className="mx-auto w-full px-4 md:px-8">
         <div
-          className="group relative md:mt-0 lg:mt-6 flex gap-6 overflow-hidden p-2"
+          className="group relative md:mt-0 lg:mt-6 flex gap-6 overflow-hidden px-2 pb-2 pt-0 sm:p-2"
           style={{
             maskImage:
               'linear-gradient(to left, transparent 5%, black 20%, black 80%, transparent 95%)',
