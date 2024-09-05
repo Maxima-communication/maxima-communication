@@ -235,7 +235,7 @@ export default function SiteHeader() {
             transition={{ duration: 0.3 }}
             className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8 lg:hidden"
           >
-            <div className="grid grid-cols-1 gap-16 pb-24 pt-6 lg:grid-cols-2 lg:pt-12">
+            <div className="grid grid-cols-1 gap-16 pb-12 pt-6 lg:grid-cols-2 lg:pt-12">
               <nav className="divide-purple-200 dark:divide-opacity-20 dark:divide-purple-400 flex flex-col gap-1 divide-y">
                 {navigation.map((item) => (
                   <ScrollLink
