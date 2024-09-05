@@ -31,7 +31,7 @@ const EyeShape = () => (
     viewBox="0 0 201 108"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="absolute top-[30px] -right-[5.5px] w-16 sm:top-12 sm:-right-[6px] sm:w-20 h-auto opacity-60"
+    className="absolute top-[30px] -right-[5.55px] w-16 sm:top-12 sm:-right-[6px] sm:w-20 h-auto opacity-60"
     transform="rotate(5)"
   >
     <path
