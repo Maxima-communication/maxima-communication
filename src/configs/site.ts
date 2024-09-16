@@ -4,7 +4,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Maxima Communication",
-  description: "Voice your vision. Bring Your Ideas to Life with a FREE Consultation",
+  description: "Empowering your digital presence through innovative web solutions.",
   url: "https://maxima-communication.vercel.app/",
   ogImage: "https://maxima-communication.app/opengraph-image.png",
   author: {
