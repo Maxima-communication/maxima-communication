@@ -1,14 +1,17 @@
+import { link } from "fs";
+
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Maxima Communication",
-  description:
-    "A starter template for modern web development with nextjs 13 (app route), tailwindcss and typescript.",
-  url: "https://codox.vercel.app/",
-  ogImage: "https://codox.vercel.app/opengraph-image.png",
+  description: "Voice your vision. Bring Your Ideas to Life with a FREE Consultation",
+  url: "https://maxima-communication.vercel.app/",
+  ogImage: "https://maxima-communication.app/opengraph-image.png",
   author: {
-    name: "sujjeee",
-    twitter: "https://twitter.com/sujjeeee",
-    github: "https://github.com/sujjeee",
+    name: "Maxima Communication",
+    twitter: "https://twitter.com/maximacommunication",
+    github: "https://github.com/maxima-communication",
+    instagram: "https://instagram.com/maximacommunication",
+    linkedin: "https://www.linkedin.com/company/maxima-communication",
   },
 };

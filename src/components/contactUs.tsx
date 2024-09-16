@@ -114,7 +114,7 @@ const ContactUs = () => {
                   <p
                     className={`font-medium text-purple-200 text-opacity-75 text-xs sm:text-base md:text-lg ml-[53px] sm:ml-[70px] lg:ml-20 mt-2 ${TestFont3.className}`}
                     >
-                    212 Technopark, 80000 Agadir, Morocco
+                    54 Avenue Hassan 2, Inezgane, Morocco
                   </p>
                 </div>
               </div>
@@ -140,7 +140,12 @@ const ContactUs = () => {
                   <p
                     className={`font-medium text-purple-200 text-opacity-75 text-sm sm:text-base md:text-lg ml-[53px] sm:ml-[70px] lg:ml-20 mt-2 ${TestFont3.className}`}
                     >
-                    (+212) 661 683 415
+                    +212 (0) 528 335 068
+                  </p>
+                  <p
+                    className={`font-medium text-purple-200 text-opacity-75 text-sm sm:text-base md:text-lg ml-[53px] sm:ml-[70px] lg:ml-20 mt-2 ${TestFont3.className}`}
+                    >
+                    +212 (0) 717 487 818
                   </p>
                 </div>
               </div>
@@ -177,7 +182,7 @@ const ContactUs = () => {
             <input
               type="email"
               required
-              placeholder="Your Email"
+              placeholder="Your Email Address"
               name="user_Email"
               className="bg-[#141414] mb-4 sm:mb-5 md:mb-6 lg:mb-8 border-b-2 sm:border-b-3 md:border-b-4 lg:border-b-5 border-l-2 sm:border-l-3 md:border-l-4 lg:border-l-5 border-[#5c3a78] rounded-[8px] sm:rounded-xl py-2 sm:py-3 md:py-4 lg:py-5 px-3 sm:px-4 md:px-5 lg:px-6 placeholder-gray-400 text-white text-sm sm:text-base md:text-lg focus:border-b-0 focus:border-l-0 focus:shadow-md sm:focus:shadow-lg md:focus:shadow-xl focus:shadow-[#a978cc] focus:outline-none transition-all duration-500 ease-out"
             />
