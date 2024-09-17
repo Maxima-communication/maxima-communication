@@ -1,5 +1,6 @@
 import { ThemeProvider } from "@/components/providers/theme-providers";
-
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { siteConfig } from "@/configs/site";
 import "@/styles/globals.css";
 
@@ -95,6 +96,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           disableTransitionOnChange
         >
           {children}
+          <Analytics/>
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
