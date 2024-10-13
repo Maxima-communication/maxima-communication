@@ -3,18 +3,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import localFont from "next/font/local";
-import maxima from "../../../public/m.svg";
-import maximauno from "../../../public/m-footer.svg";
+import mheaderdark from "../../../public/m-header-dark.svg";
+import mfooterdark from "../../../public/m-footer-dark.svg";
+import mheaderlight from "../../../public/m-header-light.svg";
+import mfooterlight from "../../../public/m-footer-light.svg";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
-// Testing font
-const TestFont = localFont({
-  src: "../../../public/assets/fonts/area/AreaNormalTrial-Semibold-BF65ea75c6b547e.otf",
-});
+// import { ThemeToggle } from "./theme-toggle";
+import { useTheme } from "next-themes";
 
 // Testing font
-const LogoFont = localFont({
+const TestFont = localFont({
   src: "../../../public/assets/fonts/area/AreaNormalTrial-Semibold-BF65ea75c6b547e.otf",
 });
 
@@ -37,7 +37,7 @@ const HamburgerButton = ({
 }) => (
   <button
     type="button"
-    className="text-purple-800 dark:text-white inline-flex h-14 w-14  items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2 lg:hidden"
+    className="text-sky-800 dark:text-white inline-flex h-14 w-14  items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2 lg:hidden"
     onClick={onClick}
     aria-controls="website-menu"
     aria-expanded={isOpen}
@@ -69,6 +69,7 @@ export default function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [underlineWidth, setUnderlineWidth] = useState(0);
   const selectedLinkRef = useRef<HTMLAnchorElement | null>(null);
+  const { theme } = useTheme();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -87,22 +88,52 @@ export default function SiteHeader() {
       <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-8 sm:px-6 sm:py-16 lg:py-8 lg:max-w-7xl lg:px-8">
         <div className="flex">
           <ScrollLink
-          to="header"
-          spy={true}
-          smooth={true}
-          duration={1000}
+            to="header"
+            spy={true}
+            smooth={true}
+            duration={1000}
             href="/"
-            className="focus-visible:outline-purple-500 rounded-md focus-visible:outline focus-visible:outline-2"
+            className="
+              focus-visible:outline-sky-500        
+              dark:focus-visible:outline-purple-500
+              rounded-md
+              focus-visible:outline focus-visible:outline-2
+            "
           >
             <span className="sr-only">Maxima</span>
+
+            {/* Dark Mode Header Logo */}
             <Image
-              className="h-28 w-56 hidden lg:inline-flex opacity-75"
-              src={maxima}
+              className="
+                h-28 w-56 dark:hidden dark:lg:inline-flex hidden
+                opacity-75
+                dark:opacity-75
+              "
+              src={mheaderdark}
               alt="Maxima communications"
             />
+
+            {/* Light Mode Header Logo */}
             <Image
-              className="h-14 w-auto sm:h-16 lg:hidden" // Increased logo size
-              src={maximauno}
+              className="
+                h-28 w-56 lg:inline-flex hidden dark:hidden"
+              src={mheaderlight}
+              alt="Maxima communications"
+            />
+
+            {/* Dark Mode Footer Logo */}
+            <Image
+              className="
+                h-14 w-auto sm:h-16 dark:lg:hidden dark:block hidden opacity-75"
+              src={mfooterdark}
+              alt="Maxima communications"
+            />
+
+            {/* Light Mode Footer Logo */}
+            <Image
+              className="
+                h-14 w-auto sm:h-16 lg:hidden block dark:hidden"
+              src={mfooterlight}
               alt="Maxima communications"
             />
           </ScrollLink>
@@ -123,8 +154,8 @@ export default function SiteHeader() {
                   TestFont.className
                 } ${
                   isSelected
-                    ? "text-purple-800 dark:text-white"
-                    : "text-purple-600 dark:text-purple-200"
+                    ? "bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent dark:text-white"
+                    : "bg-gradient-to-r from-[#0074a1] via-sky-600 to-[#0074a1] bg-clip-text text-transparent dark:text-purple-200"
                 }`}
                 onClick={() => {
                   setSelectedLink(item.name);
@@ -172,49 +203,51 @@ export default function SiteHeader() {
           })}
         </nav>
 
+        {/* <ThemeToggle /> */}
+
         {/* Get in touch button (desktop only) */}
         <ScrollLink
-        to="contactus"
-        spy={true}
-        smooth={true}
-        duration={1000}
-          className="hidden lg:inline-flex relative items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-black hover:text-white transition-all duration-150 ease-in-out rounded-3xl hover:pl-10 hover:pr-6 bg-gray-50 hover:bg-opacity-0 group border hover:border-white hover:backdrop-blur-3xl cursor-pointer"
+          to="contactus"
+          spy={true}
+          smooth={true}
+          duration={1000}
+          className="hidden lg:inline-flex relative items-center justify-start overflow-hidden group py-3 pl-4 pr-12 font-semibold dark:text-black text-white transition-all duration-150 ease-in-out rounded-3xl hover:pl-10 hover:pr-6 dark:bg-blue-200 bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] dark:bg-gradient-to-r dark:from-white dark:via-white dark:to-white hover:bg-gradient-to-r hover:from-[#0074a1]/10 hover:via-sky-800/10 hover:to-[#0074a1]/10 dark:hover:bg-gradient-to-r dark:hover:from-gray-50/10 dark:hover:via-gray-50/10 dark:hover:to-gray-50/10 dark:hover:bg-opacity-0 border border-transparent dark:hover:border-white hover:border hover:border-sky-800 hover:backdrop-blur-3xl cursor-pointer"
         >
           <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out group-hover:h-full"></span>
           <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
             <svg
-              className="w-5 h-5 text-black hover:text-white"
+              className="w-4 h-4 md:w-5 md:h-5 dark:text-black text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               ></path>
             </svg>
           </span>
           <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
             <svg
-              className="w-5 h-5 text-white"
+              className="w-4 h-4 md:w-5 md:h-5 dark:text-white text-sky-800"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               ></path>
             </svg>
           </span>
           <span
-            className={`relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white`}
+            className={`relative w-full text-sm md:text-base text-left transition-colors duration-200 ease-in-out dark:group-hover:text-white group-hover:bg-gradient-to-r group-hover:from-[#0074a1] group-hover:via-sky-800 group-hover:to-[#0074a1] group-hover:bg-clip-text group-hover:text-transparent`}
           >
             Get in touch
           </span>
@@ -236,7 +269,7 @@ export default function SiteHeader() {
             className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8 lg:hidden"
           >
             <div className="grid grid-cols-1 gap-16 pb-10 pt-6 lg:grid-cols-2 lg:pt-12">
-              <nav className="divide-purple-200 dark:divide-opacity-20 dark:divide-purple-400 flex flex-col gap-1 divide-y">
+              <nav className="divide-sky-400 divide-opacity-20 dark:divide-opacity-20 dark:divide-purple-400 flex flex-col gap-1 divide-y">
                 {navigation.map((item) => (
                   <ScrollLink
                     key={item.name}
@@ -245,15 +278,15 @@ export default function SiteHeader() {
                     smooth={true}
                     offset={-450}
                     duration={1000}
-                    className="text-purple-800 dark:text-white group inline-flex py-6 text-3xl font-medium tracking-tight transition focus-visible:outline-none sm:py-8 sm:text-4xl cursor-pointer"
+                    className="text-sky-800 dark:text-white group inline-flex py-6 text-3xl font-medium tracking-tight transition focus-visible:outline-none sm:py-8 sm:text-4xl cursor-pointer"
                     onClick={() => {
                       setSelectedLink(item.name);
                       setIsMenuOpen(false);
                     }}
                   >
-                    <div className="group-focus-visible:outline-purple-500 flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
+                    <div className="group-focus-visible:outline-sky-500 dark:group-focus-visible:outline-purple-500 flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
                       <div className="flex items-center gap-6">
-                        <span className="text-xs text-purple-500 dark:text-purple-300">{`0${
+                        <span className="text-xs text-sky-500 dark:text-purple-300">{`0${
                           navigation.indexOf(item) + 1
                         }`}</span>
                         <span className="group-hover:underline">
@@ -261,7 +294,7 @@ export default function SiteHeader() {
                         </span>
                       </div>
                       <svg
-                        className="text-purple-500 dark:text-purple-300 h-6 w-6 sm:h-8 sm:w-8"
+                        className="text-sky-500 dark:text-purple-300 h-6 w-6 sm:h-8 sm:w-8 mr-[14px]"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"

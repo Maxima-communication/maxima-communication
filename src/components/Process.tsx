@@ -26,7 +26,7 @@ const Process = () => {
 
       <div className="flex flex-col items-center relative px-4 sm:px-6 md:px-8">
         <h4
-          className={`text-2xl sm:text-3xl md:text-4xl text-white uppercase ${Engebrechtre.className} text-center`}
+          className={`text-2xl sm:text-3xl md:text-4xl bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent dark:text-white uppercase ${Engebrechtre.className} text-center`}
         >
           Our Process
         </h4>
@@ -46,12 +46,12 @@ const Process = () => {
         </div>
         <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center gap-8 px-4 lg:px-16">
           <div
-            className={`text-3xl sm:text-4xl font-bold text-white text-center lg:text-left ${Engebrechtre.className}`}
+            className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent dark:text-white text-center lg:text-left ${Engebrechtre.className}`}
           >
             <AnimatedText text="Discover" />
           </div>
           <div
-            className={`max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl mt-2 sm:mt-0 text-center font-medium text-gray-200 text-sm sm:text-base lg:text-base ${TestFont.className}`}
+            className={`max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl mt-2 sm:mt-0 text-center font-medium bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 bg-clip-text text-transparent dark:text-gray-200 text-sm sm:text-base lg:text-base ${TestFont.className}`}
           >
             <p>
               Our process begins with a thorough discovery phase where we take
@@ -65,7 +65,7 @@ const Process = () => {
           </div>
         </div>
       </div>
-      <div className="absolute left-1/2 sm:left-[675px] lg:left-1/2 w-2/5 sm:w-1/3 md:w-3/12 top-[710px] sm:top-[860px] lg:top-[600px] transform -translate-x-1/2 md:-translate-x-96 lg:-translate-x-1/2 -bottom-44 opacity-25">
+      <div className="absolute invert dark:invert-0 left-1/2 sm:left-[675px] lg:left-1/2 w-2/5 sm:w-1/3 md:w-3/12 top-[710px] sm:top-[860px] lg:top-[600px] transform -translate-x-1/2 md:-translate-x-96 lg:-translate-x-1/2 -bottom-44 opacity-15 dark:opacity-25">
         <Image src={arrow} alt="arrow" width="250" />
       </div>
       {/* ---------------------------------- Part 3 -------------------------------------------------------- */}
@@ -73,12 +73,12 @@ const Process = () => {
       <div className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between my-20 mt-52 sm:mt-56 md:mt-60 lg:mt-10  min-h-[600px] relative">
         <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center gap-8 px-4 lg:px-16 order-2 lg:order-1 mb-8 lg:mb-0">
           <div
-            className={`text-3xl sm:text-4xl font-bold text-white text-center lg:text-left ${Engebrechtre.className}`}
+            className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent dark:text-white text-center lg:text-left ${Engebrechtre.className}`}
             >
             <AnimatedText text="Build" />
           </div>
           <div
-            className={`max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl mt-2 sm:mt-0 text-center font-medium text-gray-200 text-sm sm:text-base lg:text-base ${TestFont.className}`}
+            className={`max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl mt-2 sm:mt-0 text-center font-medium bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 bg-clip-text text-transparent dark:text-gray-200 text-sm sm:text-base lg:text-base ${TestFont.className}`}
             >
             <p>
               During the build phase, our skilled developers and designers work
@@ -100,7 +100,7 @@ const Process = () => {
           />
         </div>
       </div>
-      <div className="absolute left-1/2 w-2/5 sm:w-full  md:w-3/12 top-[1575px] md:top-[1800px] lg:top-[1320px] transform -translate-x-1/2 md:-translate-x-32 lg:-translate-x-1/2 -bottom-52 opacity-25">
+      <div className="absolute invert dark:invert-0 left-1/2 w-2/5 sm:w-full  md:w-3/12 top-[1575px] md:top-[1800px] lg:top-[1320px] transform -translate-x-1/2 md:-translate-x-32 lg:-translate-x-1/2 -bottom-52 opacity-15 dark:opacity-25">
         <Image src={arrowflipped} alt="arrow" width={250} />
       </div>
       {/* ---------------------------------- Part 4 -------------------------------------------------------- */}
@@ -117,12 +117,12 @@ const Process = () => {
 
         <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center gap-8 px-4 lg:px-16 order-2 lg:order-1 mb-8 lg:mb-0">
           <div
-            className={`text-3xl sm:text-4xl font-bold text-white text-center lg:text-left ${Engebrechtre.className}`}
+            className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent dark:text-white text-center lg:text-left ${Engebrechtre.className}`}
             >
             <AnimatedText text="Deliver" />
           </div>
           <div
-            className={`max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl mt-2 sm:mt-0 text-center font-medium text-gray-200 text-sm sm:text-base lg:text-base ${TestFont.className}`}
+            className={`max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl mt-2 sm:mt-0 text-center font-medium bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 bg-clip-text text-transparent dark:text-gray-200 text-sm sm:text-base lg:text-base ${TestFont.className}`}
             >
             <p>
               In the deliver phase, we thoroughly test the product to ensure it

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import localFont from "next/font/local";
 import { Icons } from "./icons";
@@ -9,16 +11,16 @@ const TestFont = localFont({
 const Ticker = () => {
   return (
     <div className={`marquee ${TestFont.className}`}>
-      <ul className="marquee__content uppercase text-neutral-200 text-5xl">
+      <ul className="marquee__content">
         {tickerItems.map((item, index) => (
-          <li key={index} className="marquee__item flex items-center">
+          <li key={index} className="marquee__item flex items-center uppercase dark:text-neutral-200 text-5xl bg-gradient-to-r from-gray-700 via-gray-500 to-gray-700 bg-clip-text text-transparent">
             {item}
           </li>
         ))}
       </ul>
-      <ul className="marquee__content uppercase text-neutral-200 text-5xl" aria-hidden="true">
+      <ul className="marquee__content" aria-hidden="true">
         {tickerItems.map((item, index) => (
-          <li key={index} className="marquee__item flex items-center">
+          <li key={index} className="marquee__item flex items-center uppercase dark:text-neutral-200 text-5xl bg-gradient-to-r from-gray-700 via-gray-500 to-gray-700 bg-clip-text text-transparent">
             {item}
           </li>
         ))}

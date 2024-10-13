@@ -1,4 +1,5 @@
 'use client';
+
 import localFont from "next/font/local";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -8,6 +9,7 @@ import button from "../images/butt.svg";
 import third from "../images/third.png";
 import mesh from "../images/4.svg";
 import GradientCursor from "./ui/cursor";
+import { useTheme } from 'next-themes';
 
 const Coolvetica = localFont({
   src: "../../public/assets/fonts/coolvetica/coolvetica rg.otf",
@@ -15,6 +17,7 @@ const Coolvetica = localFont({
 
 const Aboutus = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const { theme } = useTheme();
 
   return (
     <div className="relative container my-20 sm:my-32 sm:mb-52 md:mb-60 lg:my-32 max-w-6xl flex items-start justify-start  md:items-center md:justify-center lg:min-h-screen mx-auto">
@@ -22,14 +25,14 @@ const Aboutus = () => {
       <Image
         src={mesh}
         alt="Mesh Background"
-        className="absolute w-[400px] h-[375px] sm:w-[600px] sm:h-[550px] lg:w-[800px] lg:h-[700px] inset-9 lg:inset-1 object-fill opacity-20 blur-[1.5px] z-[-1] -translate-x-11 -translate-y-32 sm:-translate-y-44 lg:-translate-y-8 lg:translate-x-28 md:translate-x-16"
+        className="absolute w-[400px] invert dark:invert-0 h-[375px] sm:w-[600px] sm:h-[550px] lg:w-[800px] lg:h-[700px] inset-9 lg:inset-1 object-fill opacity-20 blur-[1.5px] z-[-1] -translate-x-11 -translate-y-32 sm:-translate-y-44 lg:-translate-y-8 lg:translate-x-28 md:translate-x-16"
       />
       {/* Content */}
       <div className="relative h-48 sm:h-72 lg:h-96 flex justify-start md:justify-center items-center z-10">
         <p 
           onMouseEnter={() => setIsHovered(true)} 
           onMouseLeave={() => setIsHovered(false)}
-          className={`text-center tracking-wide py-10 w-full md:w-4/5   px-0 sm:pl-3 lg:p-20  sm:w-4/5 text-3xl sm:text-5xl lg:text-6xl text-gray-200 ${Coolvetica.className}`}
+          className={`text-center tracking-wide py-10 w-full md:w-4/5 px-0 sm:pl-3 lg:p-20 sm:w-4/5 text-3xl sm:text-5xl lg:text-6xl bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent dark:text-gray-200 ${Coolvetica.className}`}
          
         >
           A CREATIVE{" "}
@@ -54,7 +57,7 @@ const Aboutus = () => {
             <Image
               src={button}
               alt="button"
-              className="w-7 h-6 sm:w-14 sm:h-8 lg:w-14 lg:h-10 rounded-3xl mx-3"
+              className="w-7 h-6 sm:w-14 sm:h-8 lg:w-14 lg:h-10 rounded-3xl mx-3 grayscale contrast-50 dark:grayscale-0 dark:contrast-100"
             />
           </span>
           <span className="inline-block">RIGHT THING AT</span>
