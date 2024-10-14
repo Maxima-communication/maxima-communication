@@ -38,7 +38,7 @@ const Word: React.FC<WordProps> = ({ children, progress, range, isLast }) => {
 const Char: React.FC<CharProps> = ({ children, progress, range }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
-    <span className="relative inline-block">
+    <span className="relative inline-block bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent dark:text-white">
       <span className="absolute opacity-10">{children}</span>
       <motion.span style={{ opacity }}>{children}</motion.span>
     </span>
