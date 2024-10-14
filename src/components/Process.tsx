@@ -46,7 +46,7 @@ const Process = () => {
         </div>
         <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center gap-8 px-4 lg:px-16">
           <div
-            className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent dark:text-white text-center lg:text-left ${Engebrechtre.className}`}
+            className={`text-3xl sm:text-4xl font-bold text-sky-800 dark:text-white text-center lg:text-left ${Engebrechtre.className}`}
           >
             <AnimatedText text="Discover" />
           </div>
@@ -73,7 +73,7 @@ const Process = () => {
       <div className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between my-20 mt-52 sm:mt-56 md:mt-60 lg:mt-10  min-h-[600px] relative">
         <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center gap-8 px-4 lg:px-16 order-2 lg:order-1 mb-8 lg:mb-0">
           <div
-            className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent dark:text-white text-center lg:text-left ${Engebrechtre.className}`}
+            className={`text-3xl sm:text-4xl font-bold text-sky-800 dark:text-white text-center lg:text-left ${Engebrechtre.className}`}
             >
             <AnimatedText text="Build" />
           </div>
@@ -117,7 +117,7 @@ const Process = () => {
 
         <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center gap-8 px-4 lg:px-16 order-2 lg:order-1 mb-8 lg:mb-0">
           <div
-            className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent dark:text-white text-center lg:text-left ${Engebrechtre.className}`}
+            className={`text-3xl sm:text-4xl font-bold text-sky-800 dark:text-white text-center lg:text-left ${Engebrechtre.className}`}
             >
             <AnimatedText text="Deliver" />
           </div>
