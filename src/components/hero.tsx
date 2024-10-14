@@ -186,7 +186,7 @@ export default function Hero() {
           spy={true}
           smooth={true}
           duration={1000}
-          className="inline-flex lg:hidden relative items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold dark:text-black text-white transition-all duration-150 ease-in-out rounded-3xl hover:pl-10 hover:pr-6 dark:bg-blue-200 bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] dark:bg-gradient-to-r dark:from-white dark:via-white dark:to-white hover:backdrop-blur-3xl mb-10 lg:mb-0"
+          className="inline-flex lg:hidden relative items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold dark:text-black text-white transition-all duration-150 ease-in-out rounded-3xl hover:pl-10 hover:pr-6 dark:bg-blue-200 bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] dark:bg-gradient-to-r dark:from-white dark:via-white dark:to-white hover:backdrop-blur-3xl"
         >
           <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out group-hover:h-full"></span>
           <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
