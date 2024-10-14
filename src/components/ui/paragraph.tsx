@@ -25,7 +25,7 @@ const Word: React.FC<WordProps> = ({ children, progress, range, isLast }) => {
   const amount = range[1] - range[0];
   const step = amount / children.length;
   return (
-    <span className={`inline-block ${!isLast ? 'mr-[0.25em]' : ''}`}>
+    <span className={`bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent dark:text-white inline-block ${!isLast ? 'mr-[0.25em]' : ''}`}>
       {children.split("").map((char, i) => {
         const start = range[0] + i * step;
         const end = range[0] + (i + 1) * step;
@@ -56,7 +56,7 @@ const AnimatedText: React.FC<ParagraphProps> = ({ text, className }) => {
   return (
     <p
       ref={container}
-      className={`${className} text-center whitespace-normal`}
+      className={`${className} bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent dark:text-white text-center whitespace-normal`}
     >
       {words.map((word, i) => {
         const start = i / words.length;

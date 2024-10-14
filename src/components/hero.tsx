@@ -158,7 +158,7 @@ export default function Hero() {
         >
           <span className="dark:text-white bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent">
           Voice y
-          <span className="relative">
+          <span className="relative bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent dark:text-white">
             o
             <CircleShape />
           </span>
@@ -166,7 +166,7 @@ export default function Hero() {
           </span>{` `}
           <span className={`${FlippedFont.className} dark:text-white bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent`}>
             visi
-            <span className="relative">
+            <span className="relative bg-gradient-to-r from-[#0074a1] via-sky-800 to-[#0074a1] bg-clip-text text-transparent dark:text-white">
               <EyeShape />o
             </span>
             n
