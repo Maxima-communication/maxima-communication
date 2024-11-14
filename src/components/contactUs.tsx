@@ -174,7 +174,7 @@ const ContactUs = () => {
                   <p
                     className={`font-medium dark:text-purple-200 text-sky-800 text-opacity-75 text-xs sm:text-base md:text-lg ml-[53px] sm:ml-[70px] lg:ml-20 mt-2 ${TestFont3.className}`}
                     >
-                    +212 (0) 717 487 818
+                    +212 (0) 681 798 804
                   </p>
                 </div>
               </div>
